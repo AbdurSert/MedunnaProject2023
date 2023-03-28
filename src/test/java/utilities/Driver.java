@@ -25,6 +25,10 @@ public class Driver {
 
                 case "chrome":
                 default:
+//                    ChromeOptions option = new ChromeOptions();
+//                    option.addArguments("--remote-allow-origins=*");
+//                    WebDriverManager.chromedriver().setup();
+//                    driver = new ChromeDriver(option);
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("start-maximized");
                     WebDriverManager.chromedriver().setup(); // bonogarcia dependency bunun için gerekli
