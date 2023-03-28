@@ -16,7 +16,6 @@ public class Hooks {
 
     @After
     public void teardown(Scenario scenario) {
-        // Aşağıdaki kod ile aldığımız SCREENSHOT'lar çok fazla yer kaplar.
         // Onun için bu resimler GitHub'a Push edilmemelidir.
         // Bunu şu şekilde yaparız;
         // test-output klasörüne sağ tıklayıp en aşağıdaki 'Git' seçeneğine gelinir ve 'Add to .gitignore' seçilir.
