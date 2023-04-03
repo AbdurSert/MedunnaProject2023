@@ -12,12 +12,14 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.time.Duration;
+
 public class Driver {
 
 
     public static WebDriver driver; // selenium dependency bunun icin gerekli
 
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver()  {
 
         if(driver==null){
 
@@ -25,12 +27,11 @@ public class Driver {
 
                 case "chrome":
                 default:
-//                    ChromeOptions option = new ChromeOptions();
-//                    option.addArguments("--remote-allow-origins=*");
-//                    WebDriverManager.chromedriver().setup();
-//                    driver = new ChromeDriver(option);
+
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("start-maximized");
+                     chromeOptions.addArguments("--remote-allow-origins=*"); //403 hatası için çözüm yöntemi
+
                     WebDriverManager.chromedriver().setup(); // bonogarcia dependency bunun için gerekli
                     driver = new ChromeDriver(chromeOptions);
                     System.out.println("CHROME WORKS!!!");
@@ -78,7 +79,8 @@ public class Driver {
             }
         }
         //driver.manage().window().maximize();
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 
         return driver;
     }
