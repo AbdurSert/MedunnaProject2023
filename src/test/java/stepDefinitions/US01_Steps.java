@@ -1,23 +1,20 @@
 package stepDefinitions;
 
 import com.github.javafaker.Faker;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.internal.common.assertion.AssertionSupport;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
-import pages.RegistrationPage;
+import pages.US01_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 import java.time.Duration;
 
-public class RegistrationSteps {
+public class US01_Steps {
 
     @Before
     public void waitUntillElement(){
@@ -27,7 +24,7 @@ public class RegistrationSteps {
     }
 
 
-    RegistrationPage registrationPage = new RegistrationPage();
+    US01_Page US01Page = new US01_Page();
     Actions action = new Actions(Driver.getDriver());
 
     Faker faker = new Faker();
@@ -52,14 +49,14 @@ public class RegistrationSteps {
     @When("User click register_signIn icon")
     public void userClickRegister_signInIcon() {
 
-        registrationPage.register_SignInButton.click();
+        US01Page.register_SignInButton.click();
 
     }
 
     @And("User click register button")
     public void userClickRegisterButton() {
 
-        registrationPage.registerButton.click();
+        US01Page.registerButton.click();
 
     }
 
@@ -68,7 +65,7 @@ public class RegistrationSteps {
 
         String ssnNumber = faker.idNumber().validSvSeSsn().substring(0, 10);
 
-        action.sendKeys(registrationPage.ssnBlank, ssnNumber).perform();
+        action.sendKeys(US01Page.ssnBlank, ssnNumber).perform();
 
         expectedSsnNumber = ssnNumber;
 
@@ -77,7 +74,7 @@ public class RegistrationSteps {
     @Then("Assert that is been filled valid ssn number")
     public void assertThatIsBeenFilledValidSsnNumber() {
 
-        String actualSsnNumber = registrationPage.ssnBlank.getAttribute("value");
+        String actualSsnNumber = US01Page.ssnBlank.getAttribute("value");
 
         Assert.assertTrue(actualSsnNumber.replace("-", "")
                 .equals(expectedSsnNumber.replace("-", "").replace("+", "")));
@@ -90,19 +87,19 @@ public class RegistrationSteps {
 
             String firstName = faker.name().firstName();
 
-            action.sendKeys(registrationPage.firstName, firstName).perform();
+            action.sendKeys(US01Page.firstName, firstName).perform();
 
     }
 
     @Then("Assert that firstName has no blanks and contains chars")
     public void assertThatFirstNameHasNoBlanksAndContainsChars() {
 
-    String actualFirstName = registrationPage.firstName.getText();
+    String actualFirstName = US01Page.firstName.getText();
         System.out.println(actualFirstName);
 
         for(int i = 0; i<actualFirstName.length()-1; i++ ) {
 
-            if (actualFirstName.charAt(i) >= 0 & actualFirstName.charAt(i) <= 127) {
+            if (actualFirstName.charAt(i) >= 0 && actualFirstName.charAt(i) <= 127) {
 
                 Assert.assertTrue(true);
 
@@ -130,14 +127,14 @@ public class RegistrationSteps {
     @And("User click lastname field")
     public void userClickLastnameField() {
 
-        registrationPage.lastName.click();
+        US01Page.lastName.click();
 
     }
 
     @And("User click adress field")
     public void userClickAdressField() {
 
-        registrationPage.adressField.click();
+        US01Page.adressField.click();
 
     }
 
@@ -145,7 +142,7 @@ public class RegistrationSteps {
     public void assertThatLastnameIsRequiredFieldAndContainsChars() {
 
         String actualLastNameErrorMessage = "Please enter your last name.";
-        String expectedLastNameErrorMEssage = registrationPage.lastNameErrorMessage.getText();
+        String expectedLastNameErrorMEssage = US01Page.lastNameErrorMessage.getText();
 
         Assert.assertTrue(actualLastNameErrorMessage.equals(expectedLastNameErrorMEssage));
 
@@ -157,7 +154,7 @@ public class RegistrationSteps {
 
         String lastName = faker.name().lastName();
 
-        action.sendKeys(registrationPage.lastName, lastName).perform();
+        action.sendKeys(US01Page.lastName, lastName).perform();
 
     }
 
@@ -165,7 +162,7 @@ public class RegistrationSteps {
     public void assertThatLastnameIsValidAndContainsChars() {
 
 
-    String actualLastName = registrationPage.lastName.getText();
+    String actualLastName = US01Page.lastName.getText();
 
         System.out.println(actualLastName);
 
@@ -192,7 +189,7 @@ public class RegistrationSteps {
 
         String address = faker.address().fullAddress();
 
-        action.sendKeys(registrationPage.adressField, address ).perform();
+        action.sendKeys(US01Page.adressField, address ).perform();
 
         expectedAddress = address;
 
@@ -201,7 +198,7 @@ public class RegistrationSteps {
     @Then("Assert that address field contains chars and digits with zip code")
     public void assertThatAddressFieldContainsCharsAndDigitsWithZipCode() {
 
-    String actualaddress = registrationPage.adressField.getAttribute("value");
+    String actualaddress = US01Page.adressField.getAttribute("value");
 
     Assert.assertTrue(actualaddress.equals(expectedAddress));
 
@@ -212,18 +209,22 @@ public class RegistrationSteps {
 
         phoneNumber = faker.phoneNumber().phoneNumber();
 
-        action.sendKeys(registrationPage.mobilePhoneField, phoneNumber).perform();
+        action.sendKeys(US01Page.mobilePhoneField, phoneNumber).perform();
 
     }
 
     @Then("Assert that blank filled with {int} digit long mobilephone number")
     public void assertThatBlankFilledWithDigitLongMobilephoneNumber(int arg0) {
 
-        String actualphoneNumber = registrationPage.mobilePhoneField.getAttribute("value")
+        String actualphoneNumber = US01Page.mobilePhoneField.getAttribute("value")
                 .replace("-", "");
 
         String expectedPhoneNumber= phoneNumber.replace(".", "")
                 .replace("-", "").substring(0, 10);
+
+
+        System.out.println(actualphoneNumber);
+        System.out.println(expectedPhoneNumber);
 
         Assert.assertTrue(actualphoneNumber.equals(expectedPhoneNumber));
 
@@ -235,14 +236,14 @@ public class RegistrationSteps {
 
         userName = faker.name().username();
 
-        action.sendKeys(registrationPage.usernameField, userName).perform();
+        action.sendKeys(US01Page.usernameField, userName).perform();
 
     }
 
     @Then("Assert that blank filled with username that contains any chars and digits")
     public void assertThatBlankFilledWithUsernameThatContainsAnyCharsAndDigits() {
 
-        String actualUserName = registrationPage.usernameField.getAttribute("value");
+        String actualUserName = US01Page.usernameField.getAttribute("value");
         String expectedUserName = userName;
 
         Assert.assertTrue(actualUserName.equals(expectedUserName));
@@ -254,14 +255,14 @@ public class RegistrationSteps {
 
         emailAddress = faker.internet().emailAddress();
 
-        action.sendKeys(registrationPage.emailField, emailAddress).perform();
+        action.sendKeys(US01Page.emailField, emailAddress).perform();
 
     }
 
     @Then("Assert that email contains {string} sign and {string} extension")
     public void assertThatEmailContainsSignAndExtension(String arg0, String arg1) {
 
-        String actualEmailAdress = registrationPage.emailField.getAttribute("value");
+        String actualEmailAdress = US01Page.emailField.getAttribute("value");
 
         String expectedEmailAdress = emailAddress;
 
