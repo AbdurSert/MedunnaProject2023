@@ -58,5 +58,18 @@ public class US06_Page {
 
     public WebElement userEmail;
 
+    @FindBy (css = "option[value = 'tr']")
+
+    public WebElement languageDropDownTr;
+
+    @FindBy (css= "option[value = 'en']")
+
+    public WebElement languageDropDownEn;
+
+    @FindBy (xpath = "//button[@type='submit']")
+
+    public WebElement saveButton;
+
+
 
 }

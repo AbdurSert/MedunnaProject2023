@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import com.github.javafaker.Faker;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -25,10 +27,22 @@ public class US06_Steps {
 
     }
 
+
+    Faker faker = new Faker();
+
     US06_Page us06_page = new US06_Page();
 
-    @Given("User go to home page")
-    public void userGoToHomePage() {
+
+    String firstName;
+
+    String lastName;
+
+    String emailadsress;
+
+
+
+    @Given("User goes to home page")
+    public void userGoesToHomePage() {
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
@@ -79,19 +93,108 @@ public class US06_Steps {
         Assert.assertTrue(userSettingsInfos.contains("Email"));
         Assert.assertTrue(userSettingsInfos.contains("Language"));
 
+        Driver.closeDriver();
 
-        String actuallFirstNameOfUser = us06_page.userFirstName.getAttribute("value");
-        String expectedFirstnameOfUser = "Employee";
+    }
 
-        String actuallLastNameOfUser = us06_page.userLastNAme.getAttribute("value");
-        String expectedLastNameOfUser = "Yee";
+    @Then("Assert that there are two languages available Turkish and English")
+    public void assertThatThereAreTwoLanguagesAvailableTurkishAndEnglish() {
 
-        String actuallEmailofUser = us06_page.userEmail.getAttribute("value");
-        String expectedEmailofUser = "employee2023@gmail.com";
+        List<String> actuallAvailableLanguages = new ArrayList<>();
 
-        Assert.assertTrue(expectedFirstnameOfUser.equals(actuallFirstNameOfUser));
-        Assert.assertTrue(expectedLastNameOfUser.equals(actuallLastNameOfUser));
-        Assert.assertTrue(expectedEmailofUser.equals(actuallEmailofUser));
+        actuallAvailableLanguages.add(us06_page.languageDropDownTr.getText());
+        actuallAvailableLanguages.add(us06_page.languageDropDownEn.getText());
+
+        List<String> expectedAvaliableLanguages = new ArrayList<>();
+
+        expectedAvaliableLanguages.add("Türkçe");
+        expectedAvaliableLanguages.add("English");
+
+        Assert.assertTrue(actuallAvailableLanguages.equals(expectedAvaliableLanguages));
+
+        Driver.closeDriver();
+
+    }
+
+
+    @And("User changes their first name")
+    public void userChangesTheirFirstName() {
+
+        firstName = faker.name().firstName();
+
+        us06_page.userFirstName.clear();
+
+        us06_page.userFirstName.sendKeys(firstName);
+
+    }
+
+    @And("User click save button")
+    public void userClickSaveButton() throws InterruptedException {
+
+        us06_page.saveButton.click();
+
+        Thread.sleep(5000);
+
+    }
+
+    @Then("Assert that firstname is changed")
+    public void assertThatFirstnameIsChanged() {
+
+        String actualUsernameModified = us06_page.userNameDropDown.getText();
+
+        String expectedUsernameModified = firstName;
+
+        Assert.assertTrue(actualUsernameModified.substring(0, actualUsernameModified.indexOf(" "))
+                .equals(expectedUsernameModified));
+
+        Driver.closeDriver();
+
+    }
+
+    @And("User changes their last name")
+    public void userChangesTheirLastName() {
+
+        lastName = faker.name().lastName();
+
+        us06_page.userLastNAme.clear();
+        us06_page.userLastNAme.sendKeys(lastName);
+
+    }
+
+    @Then("Assert that lastname is changed")
+    public void assertThatLastnameIsChanged() {
+
+        String actuallLastNameModified = us06_page.userNameDropDown.getText();
+
+        String expectedLastNameModified = lastName;
+
+        Assert.assertTrue(actuallLastNameModified
+                .substring(actuallLastNameModified.indexOf(" ") + 1, actuallLastNameModified.length()).equals(expectedLastNameModified));
+
+        Driver.closeDriver();
+
+    }
+
+    @And("User changes email address")
+    public void userChangesEmailAddress() {
+
+        emailadsress = faker.internet().emailAddress();
+
+        us06_page.userEmail.clear();
+        us06_page.userEmail.sendKeys(emailadsress);
+
+    }
+
+    @Then("Assert that email is changed with @ sign and . extension")
+    public void assertThatEmailIsChangedWithSignAndExtension() {
+
+        String actuallEmailAddressModified = us06_page.userEmail.getAttribute("value");
+
+        String expectedEmailAddressModified = emailadsress;
+
+        Assert.assertTrue(actuallEmailAddressModified.equals(expectedEmailAddressModified));
+
+        Driver.closeDriver();
 
     }
 }
