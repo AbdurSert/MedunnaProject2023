@@ -40,8 +40,8 @@ public class US01_Steps {
     String emailAddress;
 
 
-    @Given("user open the homepage")
-    public void userOpenTheHomepage() {
+    @Given("user opens the homepage")
+    public void userOpensTheHomepage() {
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 

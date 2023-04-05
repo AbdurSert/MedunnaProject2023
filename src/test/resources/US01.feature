@@ -2,7 +2,7 @@
 Feature: System should allow any user to register with valid credentials validating the success message
 
   Background:
-    Given user open the homepage
+    Given user opens the homepage
 
     Scenario: There should be a valid SSN respecting the "-" where necessary, it should be 9 digits long
 
