@@ -14,11 +14,9 @@ Feature: US003
 #  en az 1 özel karakter ve seviye çubuğunun buna göre değiştiğini görün
 #  Daha güçlü bir şifre için en az 7 karakter olmalıdır
 
-  @us001
-  Scenario: Registration page should restrict password usage to a secure and high level passcode
-    #Kayıt sayfası, şifre kullanımını güvenli ve yüksek seviyeli bir şifre ile sınırlandırmalıdır
-
-
+  @us003
+  @smoke
+  Scenario: Kayıt sayfası, şifre kullanımını güvenli ve yüksek seviyeli bir şifre ile sınırlandırmalıdır
     Given kullanıcı gmibank anasayfasına gider
     And anasayfada giris ikonuna tiklar
     And Register butonuna tiklar
@@ -34,6 +32,25 @@ Feature: US003
     And tarayiciyi kapatir
     #renkleri kontrol et
 
+
+#  Senaryo: Registering with a strong password
+#  Verilen gmibank.com web sitesi açılır
+#  Kullanıcı kayıt sayfasına gider
+#  Kullanıcı adı, soyadı, e-posta, telefon numarası ve güçlü bir parola girer
+#  Parola oluşturulurken minimum 1 küçük harf, 1 büyük harf, 1 sayı ve 1 özel karakter kullanır
+#  Parolanın uzunluğu en az 7 karakterdir
+#  Kullanıcı kaydını tamamlar
+#  Başarı mesajı görüntülenir
+#  Kullanıcı hesabına giriş yapar
+#  Kullanıcının hesabının parolasını değiştirmesine izin verir
+#  Kullanıcının yeni bir parola oluşturmasını isteyin ve minimum şifre özellikleri yapılandırmasını kullanarak güçlü bir parola oluşturmasını zorunlu kılın.
+#  Değiştirilen parolanın şifre gücü düzeyi, kullanıcının o parolayı girdiğinde, şifre düzey çizelgesinde gösterilir
+#
+#  Bu senaryo, "Registration" sayfasındaki şifre kullanımının limitlerinin test edilmesini
+#  ve kabul kriterlerinin doğru şekilde karşılanmasını sağlar.
+#  Ayrıca, kullanıcıların yeni bir parola oluştururken minimum özellikler yapılandırması
+#  kullanarak güçlü bir parola oluşturmasını zorunlu kılar ve şifre düzey çizelgesinde
+#  bu parolaların gücünü gösterir.
 
 
 

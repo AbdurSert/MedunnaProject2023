@@ -35,7 +35,6 @@ public class US008_Steps {
     @And("current passwordu girer")
     public void currentPassworduGirer() throws InterruptedException {
         us008Pages.currentPassword.sendKeys("Admin.Strator23");
-        Driver.wait(5);
     }
 
     @When("New password kutusuna eski password girer")
@@ -43,7 +42,6 @@ public class US008_Steps {
         us008Pages.newPassword.sendKeys("Admin.Strator23");
         us008Pages.newPasswordConfirmation.sendKeys("Admin.Strator23");
         us008Pages.save.click();
-        Driver.wait(5);
 
     }
 
@@ -52,7 +50,6 @@ public class US008_Steps {
         us008Pages.newPasswordConfirmation.clear();
 
         Assert.assertTrue(us008Pages.newPasswordShouldBeDiffere.isDisplayed());
-        Driver.wait(5);
 
     }
 
@@ -61,14 +58,12 @@ public class US008_Steps {
         us008Pages.newPassword.clear();
         us008Pages.newPasswordConfirmation.click();
         us008Pages.newPassword.sendKeys("a");
-        Driver.wait(5);
 
     }
 
     @And("Sonra buyuk harf ekler")
     public void sonraBuyukHarfEkler() throws InterruptedException {
         us008Pages.newPassword.sendKeys("A");
-        Driver.wait(5);
 
     }
 
@@ -80,15 +75,11 @@ public class US008_Steps {
         System.out.println("ikinci bar "+ hexColor);
 
         Assert.assertEquals(hexColor,expectedSecondBarColor);
-        Driver.wait(3);
-
     }
 
     @And("bir rakam ekler")
     public void birRakamEkler() throws InterruptedException {
         us008Pages.newPassword.sendKeys("1");
-        Driver.wait(3);
-
     }
 
     @Then("Strength barin iki arttigini dogrular")
@@ -99,15 +90,11 @@ public class US008_Steps {
         System.out.println("ücüncü bar "+ hexColor);
 
         Assert.assertEquals(expectedFourthBarColor,hexColor);
-        Driver.wait(3);
-
     }
 
     @And("ozel karakter ekler")
     public void ozelKarakterEkler() throws InterruptedException {
         us008Pages.newPassword.sendKeys(".");
-        Driver.wait(3);
-
     }
 
     @Then("Strengt barin uc arttgini dogrular")
@@ -118,14 +105,12 @@ public class US008_Steps {
         System.out.println("dördüncu bar "+ hexColor);
 
         Assert.assertEquals(expectedFifthBarColor,hexColor);
-        Driver.wait(3);
 
     }
 
     @And("bir kucuk, bir buyuk harf, bir rakam ile bir ozel karakter iceren yedi karakter girer")
     public void birKucukBirBuyukHarfBirRakamIleBirOzelKarakterIcerenYediKarakterGirer() throws InterruptedException {
         us008Pages.newPassword.sendKeys("aA1.123");
-        Driver.wait(3);
 
     }
 
@@ -140,9 +125,10 @@ public class US008_Steps {
         Assert.assertEquals(expectedFifthBarColor,hexColor);
     }
 
-    @And("signout butonuna tiklar")
-    public void signoutButonunaTiklar() {
+    @And("Administrator signout butonuna tiklar")
+    public void administratorSignoutButonunaTiklar() {
         us008Pages.adminStrator.click();
         us008Pages.signOut.click();
+        Driver.closeDriver();
     }
 }

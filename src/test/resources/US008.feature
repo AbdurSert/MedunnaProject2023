@@ -9,7 +9,7 @@ Feature: US008
 #  There should be at least 1 digit  and see the level  chart change accordingly
 #  There should be at least 1 special char and see the level bar change accordingly
 #  There should be at least 7 chars for a stronger password
-#  The new passwoerd should be confirmed
+#  The new password should be confirmed
 #
 #  Eski sifre kullanilmamalidir
 #  Daha guclu bir sifre icin en az 1 kucuk karakter olmali ve seviye tablosunun buna göre değişmesini görmeli
@@ -20,9 +20,8 @@ Feature: US008
 #  Yeni şifre onaylanmalıdır
 
   @us008
-  Scenario:Password segment on Homepage should be editable
-  #Ana Sayfadaki sifre bolumu duzenlenebilir olmalidir Given
-
+  @smoke
+  Scenario:Ana Sayfadaki sifre bolumu duzenlenebilir olmalidir
     Given kullanıcı gmibank anasayfasına gider
     And anasayfada giris ikonuna tiklar
     And signin butonuna tiklar
@@ -41,7 +40,23 @@ Feature: US008
     Then Strengt barin uc arttgini dogrular
     And bir kucuk, bir buyuk harf, bir rakam ile bir ozel karakter iceren yedi karakter girer
     Then Strength barin tamamen yandigini test eder
-  And signout butonuna tiklar
+  And Administrator signout butonuna tiklar
     #And tarayiciyi kapatir
+
+#  Senaryo: Şifre değiştirme ve güçlendirme
+#  Verilen gmibank.com web sitesi açılır
+#  Kullanıcı hesabına giriş yapar
+#  Kullanıcı hesap ayarlarını açar
+#  Kullanıcı mevcut şifresini girerek şifre değiştirme işlemini başlatır
+#  Kullanıcı eski şifreyi girer
+#  Yeni bir şifre oluştururken minimum 1 küçük harf, 1 büyük harf, 1 sayı ve 1 özel karakter kullanır
+#  Şifrenin uzunluğu en az 7 karakterdir
+#  Yeni şifreyi onaylar
+#  Yeni şifrenin kabul kriterleri doğru şekilde karşılandığı görülür
+#  Başarılı bir mesaj görüntülenir
+#  Bu senaryo, kullanıcıların mevcut şifrelerini değiştirerek
+#  güçlü bir şifre oluşturmalarını ve kabul kriterlerinin
+#  doğru şekilde karşılandığını kontrol etmelerini sağlar.
+#  Ayrıca, yeni şifrenin doğru şekilde onaylanarak kaydedildiğini de doğrular.
 
 

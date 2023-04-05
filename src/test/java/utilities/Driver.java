@@ -19,18 +19,18 @@ public class Driver {
 
     public static WebDriver driver; // selenium dependency bunun icin gerekli
 
-    public static WebDriver getDriver()  {
+    public static WebDriver getDriver() {
 
-        if(driver==null){
+        if (driver == null) {
 
-            switch (ConfigReader.getProperty("browser")){
+            switch (ConfigReader.getProperty("browser")) {
 
                 case "chrome":
                 default:
 
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("start-maximized");
-                     chromeOptions.addArguments("--remote-allow-origins=*"); //403 hatası için çözüm yöntemi
+                    //chromeOptions.addArguments("--remote-allow-origins=*"); //403 hatası için çözüm yöntemi
 
                     WebDriverManager.chromedriver().setup(); // bonogarcia dependency bunun için gerekli
                     driver = new ChromeDriver(chromeOptions);
@@ -59,7 +59,7 @@ public class Driver {
                     EdgeOptions edgeOptions = new EdgeOptions();
                     edgeOptions.addArguments("start-maximized");
                     WebDriverManager.edgedriver().setup();
-                    driver= new EdgeDriver(edgeOptions);
+                    driver = new EdgeDriver(edgeOptions);
                     System.out.println("EDGE WORKS!!!");
                     break;
                 case "ie":
@@ -86,7 +86,7 @@ public class Driver {
     }
 
     public static void closeDriver() {
-        if(driver!=null){
+        if (driver != null) {
             driver.quit();
             driver = null;
         }
@@ -94,7 +94,7 @@ public class Driver {
 
     public static void wait(int second) throws InterruptedException {
 
-        Thread.sleep(second*1000);
+        Thread.sleep(second * 1000);
 
     }
 }

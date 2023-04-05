@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.8.2</version>
+            <version>4.8.3</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -53,16 +53,7 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.14.2</version>
         </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.datatype</groupId>
-            <artifactId>jackson-datatype-jdk8</artifactId>
-            <version>2.14.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.5.4</version>
-        </dependency>
+
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
@@ -99,11 +90,7 @@
             <artifactId>json-schema-validator</artifactId>
             <version>5.3.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.14.2</version>
-        </dependency>
+
 
 
 
