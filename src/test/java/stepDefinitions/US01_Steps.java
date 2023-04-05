@@ -23,13 +23,14 @@ public class US01_Steps {
 
     }
 
-
     US01_Page US01Page = new US01_Page();
+
     Actions action = new Actions(Driver.getDriver());
 
     Faker faker = new Faker();
 
     String expectedAddress;
+
     String expectedSsnNumber;
 
     String phoneNumber;
