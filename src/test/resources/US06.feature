@@ -36,14 +36,3 @@ Feature: User info segment (User Settings) should be editable on Homepage
     And User changes email address
     And User click save button
     Then Assert that email is changed with @ sign and . extension
-
-
-
-
-
-
-
-
-
-
-

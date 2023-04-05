@@ -20,25 +20,15 @@ import java.util.List;
 public class US06_Steps {
 
 
-    @Before
-    public void waitUntillElement(){
-
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-    }
-
-
     Faker faker = new Faker();
 
     US06_Page us06_page = new US06_Page();
-
 
     String firstName;
 
     String lastName;
 
-    String emailadsress;
-
+    String emailaddress;
 
 
     @Given("User goes to home page")
@@ -93,8 +83,6 @@ public class US06_Steps {
         Assert.assertTrue(userSettingsInfos.contains("Email"));
         Assert.assertTrue(userSettingsInfos.contains("Language"));
 
-        Driver.closeDriver();
-
     }
 
     @Then("Assert that there are two languages available Turkish and English")
@@ -147,7 +135,6 @@ public class US06_Steps {
         Assert.assertTrue(actualUsernameModified.substring(0, actualUsernameModified.indexOf(" "))
                 .equals(expectedUsernameModified));
 
-        Driver.closeDriver();
 
     }
 
@@ -171,17 +158,15 @@ public class US06_Steps {
         Assert.assertTrue(actuallLastNameModified
                 .substring(actuallLastNameModified.indexOf(" ") + 1, actuallLastNameModified.length()).equals(expectedLastNameModified));
 
-        Driver.closeDriver();
-
     }
 
     @And("User changes email address")
     public void userChangesEmailAddress() {
 
-        emailadsress = faker.internet().emailAddress();
+        emailaddress = faker.internet().emailAddress();
 
         us06_page.userEmail.clear();
-        us06_page.userEmail.sendKeys(emailadsress);
+        us06_page.userEmail.sendKeys(emailaddress);
 
     }
 
@@ -190,11 +175,9 @@ public class US06_Steps {
 
         String actuallEmailAddressModified = us06_page.userEmail.getAttribute("value");
 
-        String expectedEmailAddressModified = emailadsress;
+        String expectedEmailAddressModified = emailaddress;
 
         Assert.assertTrue(actuallEmailAddressModified.equals(expectedEmailAddressModified));
-
-        Driver.closeDriver();
 
     }
 }
