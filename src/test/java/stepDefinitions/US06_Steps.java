@@ -48,15 +48,17 @@ public class US06_Steps {
     @And("User fill the userName and password field with their informations")
     public void userFillTheUserNameAndPasswordFieldWithTheirInformations() {
 
-        us06_page.userNameField.sendKeys("employee2023");
-        us06_page.passwordField.sendKeys("Emplo.Yee23");
+        us06_page.userNameField.sendKeys("manager2023");
+        us06_page.passwordField.sendKeys("Mana.Ger23");
 
     }
 
     @And("User click the signInbutton")
-    public void userClickTheSignInbutton() {
+    public void userClickTheSignInbutton() throws InterruptedException {
 
         us06_page.SignInButton.click();
+
+        Thread.sleep(1000);
     }
 
     @And("User click icon that contains their username")
