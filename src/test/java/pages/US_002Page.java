@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class ImrenPages {
+public class US_002Page {
 
-    public ImrenPages() {
+    public US_002Page() {
         PageFactory.initElements(Driver.getDriver(),  this);}
 
     //RegisterPage - US_002
