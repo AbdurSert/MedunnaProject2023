@@ -33,12 +33,17 @@ public class US013_Steps {
     public void createMyAccountButonunaTiklar() {
         us013Pages.createANewAccount.click();
 
+    } @When("Description alanini bos birakinca uyari alir")
+    public void descriptionAlaniniBosBirakincaUyariAlir() {
+        us013Pages.description.sendKeys("");
+        us013Pages.balance.sendKeys("");
+        Assert.assertTrue(us013Pages.thisFieldIsRequired.isDisplayed());
+        //bu elementin olmadığını nasıl test ederim
     }
     @Then("Description alani icin aciklama olusturur")
     public void descriptionAlaniIcinAciklamaOlusturur() {
-        us013Pages.description.sendKeys("description12");
-        //Assert.assertFalse(us013Pages.thisFieldIsRequired.isDisplayed());
-        //bu elementin olmadığını nasıl test ederim
+        us013Pages.description.sendKeys("description123");
+
     }
 
 
@@ -75,9 +80,11 @@ public class US013_Steps {
 
     @And("Employee signout butonuna tiklar")
     public void employeeSignoutButonunaTiklar() {
-        us013Pages.employeeYee.click();
+        us013Pages.employee2023.click();
         us013Pages.signOut.click();
         Driver.closeDriver();
 
     }
+
+
 }
