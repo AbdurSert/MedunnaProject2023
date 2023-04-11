@@ -28,43 +28,43 @@ public class US_007Steps {
     @And("kullanici sign in eder")
     public void kullaniciSignInEder() throws InterruptedException {
         us007Page.signInLink.click();
-        Driver.wait(2);
+        //Driver.wait(2);
         us007Page.usernameSignIn.sendKeys(ConfigReader.getProperty("user_username"));
-        Driver.wait(2);
+        //Driver.wait(2);
         us007Page.passwordSignIn.sendKeys(ConfigReader.getProperty("user_password"));
-        Driver.wait(2);
+        //Driver.wait(2);
         us007Page.signInButton.click();
-        Driver.wait(2);
+        //Driver.wait(2);
     }
 
     @And("kullanici menuden user infoya gider")
     public void kullaniciMenudenUserInfoyaGider() throws InterruptedException {
         us007Page.userAccount.click();
-        Driver.wait(2);
+        //Driver.wait(2);
         us007Page.userInfoLink.click();
-        Driver.wait(2);
+        //Driver.wait(2);
     }
 
     @When("kullanici invalid bir {string} girer")
     public void kullaniciInvalidBirGirer(String arg0) throws InterruptedException {
         us007Page.userEmailField.clear();
-        Driver.wait(3);
+        //Driver.wait(3);
         us007Page.userEmailField.sendKeys(arg0);
-        Driver.wait(2);
+        //Driver.wait(2);
     }
 
     @Then("invalid e-posta mesajini gorur")
     public void invalidEPostaMesajiniGorur() throws InterruptedException {
         Assert.assertTrue(us007Page.invalidEmailMessage.isDisplayed());
-        Driver.wait(2);
+        //Driver.wait(2);
     }
 
     @And("kullanici user menuden cikis yapar")
     public void kullaniciUserMenudenCikisYapar() throws InterruptedException {
         us007Page.userAccount.click();
-        Driver.wait(2);
+        //Driver.wait(2);
         us007Page.signOutButton.click();
-        Driver.wait(2);
+        //Driver.wait(2);
     }
 
     @Then("kullanici Ingilzce ve Turkce secenegini gorur")
