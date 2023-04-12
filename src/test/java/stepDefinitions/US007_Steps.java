@@ -6,14 +6,14 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import pages.US_007Page;
+import pages.US007_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 import java.util.List;
 
-public class US_007Steps {
-    US_007Page us007Page = new US_007Page();
+public class US007_Steps {
+    US007_Pages us007Page = new US007_Pages();
     public void selectAnItemFromDropdown(WebElement item, String selectableItem) throws InterruptedException {
         Driver.wait(5);
         Select select = new Select(item);

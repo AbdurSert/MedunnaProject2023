@@ -7,11 +7,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import pages.US_002Page;
+import pages.US002_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_002 {
+public class US002_Steps {
     Faker faker = new Faker();
     String invalidSSN1 = faker.regexify("([10-99]){2}([ß|&|%|$|*|#|§|+|≠|!|¡|]){1}([-]){1}([10-99]){2}([-]{1})([1000-9999]){4}");
     String invalidSSN2 = faker.regexify("([10-99]){2}([A-Z]){1}([-]){1}([10-99]){2}([-]{1})([1000-9999]){4}");
@@ -22,7 +22,7 @@ public class US_002 {
         }
         return key;
     }
-    US_002Page pages = new US_002Page();
+    US002_Pages pages = new US002_Pages();
     @Given("Kullanici anasayfaya yonlenir")
     public void kullaniciAnasayfayaYonlenir() {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
