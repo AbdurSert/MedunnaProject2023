@@ -54,7 +54,7 @@ public class US004stepdefs {
 
     @Then("see if you are signed in")
     public void seeIfYouAreSignedIn() {
-    String signInValidationActual = homePage.myOperationsText.getText();
+    String signInValidationActual = loginpage.myOperationsText.getText();
     String signInValidationExpected= "My Operations";
         Assert.assertTrue(signInValidationExpected.equals(signInValidationActual));
     }
@@ -68,6 +68,12 @@ public class US004stepdefs {
     }
 
     @Then("see if it is cancelled")
-    public void seeIfItIsCancelled() {Driver.driver.getCurrentUrl().equals("https://gmibank.com/");
+    public void seeIfItIsCancelled() {
+        String actualUrl = Driver.driver.getCurrentUrl();
+        String expectedUrl = "https://gmibank.com/";
+        Assert.assertEquals(expectedUrl,actualUrl);
+
+
+
     }
 }

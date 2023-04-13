@@ -1,4 +1,4 @@
 $(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"ade8d24c-f610-4144-865b-d668bbc781dc","feature":"Login page should accessible with valid credentials","scenario":"There should be an option to cancel login","start":1680802137264,"group":1,"content":"","tags":"@medunna,","end":1680802162072,"className":"passed"},{"id":"4c3d3a76-e86e-4614-9c55-35346551a29b","feature":"Login page should accessible with valid credentials","scenario":"There should be a valid username and password validating the success message to login","start":1680802097874,"group":1,"content":"","tags":"@medunna,","end":1680802137213,"className":"passed"}]);
+CucumberHTML.timelineItems.pushArray([{"id":"f6a92db3-498e-42cb-924f-e180d6c058a2","feature":"Login page should accessible with valid credentials","scenario":"There should be an option to cancel login","start":1681243158630,"group":1,"content":"","tags":"@us04,@us0402,","end":1681243179720,"className":"passed"}]);
 CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
 });

@@ -17,8 +17,7 @@ public class HomePage {
     @FindBy(xpath = ("//a[@id='login-item']//span"))
     public WebElement signin;
 
-    @FindBy(xpath = ("//li[@id='entity-menu']//a[@aria-haspopup='true']//span"))
-    public WebElement myOperationsText;
+
 
 
 

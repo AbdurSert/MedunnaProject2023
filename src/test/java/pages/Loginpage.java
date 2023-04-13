@@ -24,6 +24,13 @@ public class Loginpage {
     @FindBy (xpath = ("//span[normalize-space()='Cancel']"))
     public WebElement cancelButton;
 
+    @FindBy(xpath = ("//li[@id='entity-menu']//a[@aria-haspopup='true']//span"))
+    public WebElement myOperationsText;
+
+    @FindBy(xpath = ("//li[@id='entity-menu']//div[@role='menu']//a[1]//span[1]"))
+    public WebElement manageCustomers;
+
+
 
 
 
