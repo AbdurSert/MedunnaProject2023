@@ -11,7 +11,7 @@ public class HomePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = ("(//*[name()='svg'][@data-icon='user'])[1]"))
+    @FindBy(xpath = ("/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/nav[1]/div[1]/ul[1]/li[8]/a[1]"))
     public WebElement dropdown;
 
     @FindBy(xpath = ("//a[@id='login-item']//span"))

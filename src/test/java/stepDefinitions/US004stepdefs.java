@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import pages.Loginpage;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US004stepdefs {
@@ -16,10 +17,8 @@ public class US004stepdefs {
 
 
     @Given("go to website Gmibank")
-    public void goToWebsiteGmibank() {
-
-        WebDriver driver= Driver.getDriver();
-        driver.get("https://gmibank.com/");
+    public void goToWebsiteGmibank() throws InterruptedException {
+    Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
 
     @And("click dropdown login")

@@ -11,7 +11,7 @@ Feature:Create a new customer
     And go to password box
     And enter a valid password
     And click to sign in button
-    And click to dropdown on my operations
+    And click to the dropdown on my operations
     And click to manage customers
     And click to the first ID box
     Then assert if all the info of the customer shines

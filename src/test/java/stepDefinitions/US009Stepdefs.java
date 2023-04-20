@@ -16,8 +16,8 @@ public class US009Stepdefs {
 
 
 
-    @And("click to dropdown on my operations")
-    public void clickToDropdownOnMyOperations() throws InterruptedException {
+    @And("click to the dropdown on my operations")
+    public void clickToTheDropdownOnMyOperations() throws InterruptedException {
        loginpage.myOperationsText.click();Thread.sleep(2000);
     }
 

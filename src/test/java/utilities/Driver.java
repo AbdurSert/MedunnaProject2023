@@ -12,6 +12,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.time.Duration;
+
 public class Driver {
 
 
@@ -73,8 +75,8 @@ public class Driver {
                     break;
             }
         }
-        //driver.manage().window().maximize();
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         return driver;
     }
