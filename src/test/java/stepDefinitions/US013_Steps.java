@@ -33,12 +33,12 @@ public class US013_Steps {
     public void createMyAccountButonunaTiklar() {
         us013Pages.createANewAccount.click();
 
-    } @When("Description alanini bos birakinca uyari alir")
+    } @Then("Description alanini bos birakinca uyari alir")
     public void descriptionAlaniniBosBirakincaUyariAlir() {
         us013Pages.description.sendKeys("");
         us013Pages.balance.sendKeys("");
         Assert.assertTrue(us013Pages.thisFieldIsRequired.isDisplayed());
-        //bu elementin olmadığını nasıl test ederim
+        System.out.println("boşluk");
     }
     @Then("Description alani icin aciklama olusturur")
     public void descriptionAlaniIcinAciklamaOlusturur() {

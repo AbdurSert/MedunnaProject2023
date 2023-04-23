@@ -25,8 +25,8 @@ Feature: US013
     And Employee Username ve password girer, signin butonuna tiklar ve login olur
     And My Operations butonuna ardindan Manage Accounts butonuna tiklar
     When Create my account butonuna tiklar
-    When Description alanini bos birakinca uyari alir
-    Then Description alani icin aciklama olusturur
+    Then Description alanini bos birakinca uyari alir
+    When Description alani icin aciklama olusturur
     And Balance alanina bir sayi girer
     And Kullanici hesap tipi olarak CHECKING, SAVING, CREDIT_CARD or INVESTING secebilir
     And Hesap durumu ACTIVE, SUSPENDED or CLOSED olarak tanimlanmalidir

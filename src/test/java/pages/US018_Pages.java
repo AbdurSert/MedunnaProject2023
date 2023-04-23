@@ -35,7 +35,7 @@ public class US018_Pages {
     @FindBy(xpath="//div[@id='gmibankfrontendApp.tPCustomer.delete.question']") public WebElement areYouSureYouWantToDelet;
     @FindBy(xpath="//button[@id='jhi-confirm-delete-tPCustomer']//span[contains(text(),'Delete')]") public WebElement confirmDelete;
     @FindBy(xpath="//span[normalize-space()='Cancel']") public WebElement cancel;
-    @FindBy(xpath="//span[normalize-space()='Manager Boss']") public WebElement managerBoss;
+    @FindBy(xpath="//span[normalize-space()='Barney Sanford']") public WebElement managerBoss;
     @FindBy(xpath="//span[normalize-space()='Sign out']") public WebElement signOut;
 
 
