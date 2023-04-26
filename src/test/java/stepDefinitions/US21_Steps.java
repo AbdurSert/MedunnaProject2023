@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import com.google.gson.Gson;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
@@ -9,8 +8,6 @@ import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import utilities.ConfigReader;
-
-import java.util.Map;
 
 public class US21_Steps {
 
