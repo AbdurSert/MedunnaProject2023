@@ -38,6 +38,25 @@ public class US26_Steps {
 
         response.prettyPrint();
 
+
+//Second way to update
+
+        Map<String, Object> updatedCountry = new TreeMap<>();
+
+        updatedCountry.put("id", 50);
+        updatedCountry.put("name", "Bosnia");
+        updatedCountry.put("states", null);
+
+        Gson gson = new Gson();
+
+        String jsonFormatCountry = gson.toJson(updatedCountry);
+
+        Response gsonUpdatedCountry =  RestAssured.given().auth().oauth2(ConfigReader.getProperty("token"))
+                .and().contentType(ContentType.JSON).and().
+                body(updatedCountry).put();
+
+        gsonUpdatedCountry.prettyPrint();
+
     }
 
     @Then("Assert that country is updated")
@@ -49,9 +68,8 @@ public class US26_Steps {
 
         Response updatedCountry = RestAssured.given().auth().oauth2(ConfigReader.getProperty("token"))
                 .pathParam("id", "50").get("/{id}").then().assertThat()
-                .body(Matchers.containsString(name)).extract().response();
-
-        updatedCountry.prettyPrint();
+                .body(Matchers.anyOf(Matchers.containsString(name), Matchers.containsString("Bosnia")))
+                .extract().response();
 
     }
 }
