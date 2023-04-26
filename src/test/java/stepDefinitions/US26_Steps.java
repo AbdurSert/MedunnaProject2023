@@ -19,7 +19,7 @@ import java.util.TreeMap;
 public class US26_Steps {
 
     Faker faker = new Faker();
-    String name = faker.name().firstName();
+    String name = faker.country().name();
 
     @When("User update a country")
     public void userUpdateACountry() {
