@@ -19,7 +19,10 @@ import java.util.TreeMap;
 public class US26_Steps {
 
     Faker faker = new Faker();
+
     String name = faker.country().name();
+
+    String name2 = faker.country().name();
 
     @When("User update a country")
     public void userUpdateACountry() {
@@ -41,10 +44,11 @@ public class US26_Steps {
 
 //Second way to update
 
+
         Map<String, Object> updatedCountry = new TreeMap<>();
 
         updatedCountry.put("id", 50);
-        updatedCountry.put("name", "Bosnia");
+        updatedCountry.put("name", name2);
         updatedCountry.put("states", null);
 
         Gson gson = new Gson();
@@ -57,6 +61,7 @@ public class US26_Steps {
 
         gsonUpdatedCountry.prettyPrint();
 
+
     }
 
     @Then("Assert that country is updated")
@@ -68,7 +73,7 @@ public class US26_Steps {
 
         Response updatedCountry = RestAssured.given().auth().oauth2(ConfigReader.getProperty("token"))
                 .pathParam("id", "50").get("/{id}").then().assertThat()
-                .body(Matchers.anyOf(Matchers.containsString(name), Matchers.containsString("Bosnia")))
+                .body(Matchers.anyOf(Matchers.containsString(name), Matchers.containsString(name2)))
                 .extract().response();
 
     }
