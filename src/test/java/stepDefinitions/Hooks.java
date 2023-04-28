@@ -30,7 +30,7 @@ public class Hooks {
             picture = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(picture, "image/png", "passed" + scenario.getName());
         }
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 
 }

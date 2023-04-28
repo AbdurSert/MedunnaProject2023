@@ -9,7 +9,7 @@ public class US_005_LoginPage {
 
     public US_005_LoginPage(){PageFactory.initElements(Driver.getDriver(),this);}
 
-    @FindBy(xpath="//li[@id='account-menu']//a[@class='dropdown-toggle nav-link']")
+    @FindBy(xpath="(//a[@class='dropdown-toggle nav-link'])[2]")
     public WebElement profileMenu;
 
     @FindBy(xpath="(//a[@id='login-item'])[1]")
@@ -21,11 +21,11 @@ public class US_005_LoginPage {
     @FindBy(xpath="//input[@id='password']")
     public WebElement newPassword;
 
-    @FindBy(xpath="(//div[@role='alert'])[1]")
+    @FindBy(xpath="//span[contains(text(),'Did you forget your password?')]")
     public WebElement didYouForgetYourPassword;
 
-    @FindBy(xpath="(//div[@role='alert'])[2]")
-    public WebElement youDontHaveAnAccountYet;
+    @FindBy(xpath="//span[contains(text(),'Register a new account')]")
+    public WebElement registerANewAccount;
 
     @FindBy(xpath="//button[@type='submit']")
     public WebElement signInLogin;
@@ -35,6 +35,17 @@ public class US_005_LoginPage {
 
     @FindBy(xpath="(//div[@class='alert alert-danger fade show'])[1]")
     public WebElement errorMessage;
+
+    @FindBy(xpath="//span[contains(text(),'Reset your password')]")
+    public WebElement resetYourPassword;
+
+    @FindBy(xpath="//*[@id=\"register-title\"]/span")
+    public WebElement registrationPage;
+
+
+
+
+
 
 
 }
