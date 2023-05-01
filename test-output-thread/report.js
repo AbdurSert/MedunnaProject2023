@@ -1,4 +1,4 @@
 $(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"5df0028c-7294-4ba7-a358-f8d4a4b1b0ae","feature":"Address of customer can be created.","scenario":"City should be provided and cannot be left as blank.","start":1681245534341,"group":1,"content":"","tags":"@us_010,@us_010_2,","end":1681245621606,"className":"passed"}]);
+CucumberHTML.timelineItems.pushArray([{"id":"e96a3552-339d-430f-9791-86297d21d789","feature":"System should allow to read all customers info using api end point","scenario":"Read all customers you created and validate them from your data set","start":1682931665811,"group":1,"content":"","tags":"@us_020_1,","end":1682931672855,"className":"failed"}]);
 CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
 });
