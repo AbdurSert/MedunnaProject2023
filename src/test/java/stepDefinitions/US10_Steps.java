@@ -22,7 +22,7 @@ public class US10_Steps {
     @When("The manager clicks the profile menu")
     public void theManagerClicksTheProfileMenu() throws InterruptedException {
         us_005_loginPage.profileMenu.click();
-        Driver.wait(3);
+
     }
 
     @And("The manager clicks the sign in link")
@@ -34,7 +34,7 @@ public class US10_Steps {
     @And("The manager clicks the username's text box")
     public void theManagerClicksTheUsernameSTextBox() throws InterruptedException {
         us_005_loginPage.username.click();
-        Driver.wait(5);
+
     }
 
     @And("The manager enters valid username for manager")
@@ -55,7 +55,7 @@ public class US10_Steps {
     @And("The manager clicks the sign in button")
     public void theManagerClicksTheSignInButton() throws InterruptedException {
         us_005_loginPage.signInLogin.click();
-        Driver.wait(5);
+
     }
 
     @And("The manager clicks the button of {string} on the headline")
