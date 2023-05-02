@@ -19,8 +19,9 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.8.3</version>
-            <scope>compile</scope>
+
         </dependency>
+
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -95,8 +96,6 @@
 
 
     </dependencies>
-
-
 
 
 </project>
