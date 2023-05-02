@@ -10,7 +10,7 @@ import utilities.ConfigReader;
 public class US27_Steps {
     @Given("User delete each state one by one")
     public void userDeleteEachStateOneByOne() {
-        RestAssured.given().auth().oauth2(ConfigReader.getProperty("api_bearer_token"))
+        RestAssured.given().auth().oauth2(ConfigReader.getProperty("token"))
                 .and().baseUri("https://www.gmibank.com/api/tp-states/")
                 .and().contentType(ContentType.JSON)
                 .and().delete("102805")
