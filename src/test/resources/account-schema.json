@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "ssn": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "mobilePhoneNumber": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "integer"
+    },
+    "userName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "createDate": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "ssn",
+    "firstName",
+    "lastName",
+    "address",
+    "mobilePhoneNumber",
+    "userId",
+    "userName",
+    "email",
+    "createDate"
+  ]
+}
