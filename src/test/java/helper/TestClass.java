@@ -11,7 +11,7 @@ public class TestClass {
     @Test
     public void verifyUserWithID(){
         JsonPath json = restApiUtils.checkUserWithIDGet(114351).jsonPath();
-        //Assert.assertEquals("Della",json.get("firstName"));
+        Assert.assertEquals("Della",json.get("firstName"));
         Assert.assertEquals("Heaney",json.get("lastName"));
         Assert.assertEquals("ricardo.larkin@yahoo.com",json.get("email"));
     }

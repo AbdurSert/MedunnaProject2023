@@ -1,4 +1,4 @@
 $(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"e96a3552-339d-430f-9791-86297d21d789","feature":"System should allow to read all customers info using api end point","scenario":"Read all customers you created and validate them from your data set","start":1682931665811,"group":1,"content":"","tags":"@us_020_1,","end":1682931672855,"className":"failed"}]);
+CucumberHTML.timelineItems.pushArray([{"id":"7c7a4c58-ad21-4562-a5fa-ea011e73c739","feature":"System should allow to create new countries using api end point","scenario":"User can Just create each country 1 by 1","start":1682978526294,"group":1,"content":"","tags":"@us_020,","end":1682978526305,"className":"passed"},{"id":"5abdb735-d4ec-48cb-9a8c-4c320dcc28b3","feature":"System should allow to read all customers info using api end point","scenario":"Read all customers you created and validate them from your data set","start":1682978519508,"group":1,"content":"","tags":"@us_020,","end":1682978526263,"className":"failed"}]);
 CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
 });
