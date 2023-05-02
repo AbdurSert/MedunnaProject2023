@@ -14,8 +14,8 @@ public class US18_Steps {
     US18_Page us018Pages= new US18_Page();
     @And("Manager Username ve password girer, signin butonuna tiklar ve login olur")
     public void managerUsernameVePasswordGirerSigninButonunaTiklarVeLoginOlur() {
-        us008Pages.LoginUsername.sendKeys(ConfigReader.getProperty("ManagerName"));
-        us008Pages.LoginPassword.sendKeys(ConfigReader.getProperty("ManagerPassword"));
+        us008Pages.LoginUsername.sendKeys(ConfigReader.getProperty("manager_username"));
+        us008Pages.LoginPassword.sendKeys(ConfigReader.getProperty("manager_password"));
         us008Pages.signInButton.submit();//click??
     }
 
