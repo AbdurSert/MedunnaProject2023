@@ -14,6 +14,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
+
 public class Driver {
 
     public static WebDriver driver;
@@ -76,6 +77,8 @@ public class Driver {
             }
         }
 
+        //driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         return driver;
     }
@@ -89,4 +92,9 @@ public class Driver {
 
 
 
+}
+
+    public static void refreshPage(){
+        driver.navigate().refresh();
+    }
 }
