@@ -1,4 +1,4 @@
-Feature: US013
+Feature: US13
 #  An Employee can create a new Account
 #  User should create a description for the new account and it cannot be blank
 #  User should provide a balance for the first time account creation as Dollar
@@ -16,7 +16,7 @@ Feature: US013
   #Bir çalışan seçilemiyor?
 
 
-  @us013
+  @us13
   @smoke
   Scenario:  Bir Çalışan yeni bir Hesap oluşturabilir
     Given kullanıcı gmibank anasayfasına gider

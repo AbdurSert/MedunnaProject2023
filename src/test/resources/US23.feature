@@ -10,7 +10,7 @@ Feature: US023
 #  Oluşturduğunuz tüm tescil ettirenleri okuyun ve bunları veri kümenizden doğrulayın
 #  Oluşturduğunuz tüm tescil ettirenleri okuyun ve 1'e 1 doğrulayın
   @smoke
-  @us023
+  @us23
   Scenario: Sistem, api uc noktasini kullanarak tum Basvuru Sahiplerini okumaya izin vermelidir
 
     When Sistem butun kullanici bilgilerini okur

@@ -1,4 +1,4 @@
-Feature: US003
+Feature: US03
 # Registration page should restrict password usage to a secure and high level passcode
 # Kayıt sayfası, şifre kullanımını güvenli ve yüksek seviyeli bir şifre ile sınırlandırmalıdır
 
@@ -14,7 +14,7 @@ Feature: US003
 #  en az 1 özel karakter ve seviye çubuğunun buna göre değiştiğini görün
 #  Daha güçlü bir şifre için en az 7 karakter olmalıdır
 
-  @us003
+  @us03
   @smoke
   Scenario: Kayıt sayfası, şifre kullanımını güvenli ve yüksek seviyeli bir şifre ile sınırlandırmalıdır
     Given kullanıcı gmibank anasayfasına gider

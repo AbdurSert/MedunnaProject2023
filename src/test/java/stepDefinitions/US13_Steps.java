@@ -5,19 +5,19 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
-import pages.US008_Pages;
-import pages.US013_Pages;
+import pages.US08_Page;
+import pages.US13_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US13_Steps {
-    US008_Pages us008Pages= new US008_Pages();
-    US013_Pages us013Pages = new US013_Pages();
+    US08_Page us008Pages= new US08_Page();
+    US13_Page us013Pages = new US13_Page();
 
     @And("Employee Username ve password girer, signin butonuna tiklar ve login olur")
     public void employeeUsernameVePasswordGirerSigninButonunaTiklarVeLoginOlur() {
-        us008Pages.LoginUsername.sendKeys(ConfigReader.getProperty("EmployeeName"));
-        us008Pages.LoginPassword.sendKeys(ConfigReader.getProperty("EmployeePassword"));
+        us008Pages.LoginUsername.sendKeys(ConfigReader.getProperty("employee_username"));
+        us008Pages.LoginPassword.sendKeys(ConfigReader.getProperty("employee_password"));
         us008Pages.signInButton.submit();//click??
 
     }

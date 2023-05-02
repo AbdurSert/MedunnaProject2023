@@ -5,11 +5,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.Color;
-import pages.US008_Pages;
+import pages.US08_Page;
 import utilities.Driver;
 
 public class US08_Steps {
-    US008_Pages us008Pages= new US008_Pages();
+    US08_Page us008Pages= new US08_Page();
     @And("signin butonuna tiklar")
     public void signinButonunaTiklar() {
         us008Pages.mainSignIn.click();
