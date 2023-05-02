@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/Welcome6Element"
+  },
+  "definitions": {
+    "Welcome6Element": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "tpcountry": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Tpcountry"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "tpcountry"
+      ],
+      "title": "Welcome6Element"
+    },
+    "Tpcountry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "$ref": "#/definitions/Name"
+        },
+        "states": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "states"
+      ],
+      "title": "Tpcountry"
+    },
+    "Name": {
+      "type": "string",
+      "enum": [
+        "USA",
+        "FR"
+      ],
+      "title": "Name"
+    }
+  }
+}
