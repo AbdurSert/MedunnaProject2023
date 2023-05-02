@@ -33,26 +33,6 @@ Feature: US013
     And Kullanici acilir listeden bir calisan secebilir
     And Employee signout butonuna tiklar
 
-#  Senaryo: Yeni bir hesap oluşturma
-#  Verilen gmibank.com sitesi açılır
-#  Kullanıcı "Çalışan Girişi" sayfasına gider
-#  Kullanıcı hesap oluşturma sayfasına gider
-#  Kullanıcı yeni hesap için bir açıklama girer
-#  Kullanıcı ilk hesap bakiyesini (Dolar cinsinden) girer
-#  Kullanıcı hesap türünü seçer (CHECKING, SAVING, CREDIT_CARD veya INVESTING)
-#  Kullanıcının hesap durumunu belirtir (ACTIVE, SUSPENDED veya CLOSED)
-#  Kullanıcı açılır listeden bir çalışan seçer
-#  Kullanıcı yeni hesabı oluşturur
-#  Başarılı bir mesaj görüntülenir
-#  Kullanıcı yeni hesabın hesap bilgilerini kontrol eder ve doğru şekilde oluşturulduğundan emin olur
-#
-#  Bu senaryo, bir Çalışanın yeni bir hesap oluşturmak için belirtilen
-#  kabul kriterlerini karşılayıp karşılamadığını kontrol eder.
-#  Senaryo, kullanıcının yeni hesap bilgilerini
-#  doğru şekilde oluşturmasını, hesap türünü, hesap durumunu
-#  ve çalışanın adını belirlemesini içerir.
-#  Ayrıca, kullanıcının yeni hesabın bilgilerini doğru şekilde
-#  kontrol etmesini sağlar.
 
 
 

@@ -13,7 +13,7 @@ Feature: US018
 #Düzenleme portalı, kullanıcının kullanıcı bilgilerini oluşturmasına veya güncellemesine izin verebilir.
 #Kullanıcı bir müşteriyi silebilir, ancak kullanıcı silme konusunda eminse bir mesaj görür
 
-    #admin müşteriyi yönetemiyor, manager yaptım ben de
+    #admin müşteriyi yönetemiyor, manager yaptım
 @us018
 @smoke
 Scenario: Sistem Yoneticinin bir musteriyi yonetmesine izin vermelidir
@@ -29,20 +29,6 @@ Scenario: Sistem Yoneticinin bir musteriyi yonetmesine izin vermelidir
     And geri donulur ve silme tusuna tiklanir
     And silme konusunda emin olduguna iliskin mesaj gordugunu teyit eder
     And manager signout butonuna tiklar
-
-#Senaryo: Bir müşteriyi yönetme
-#Verilen gmibank.com sitesi açılır.
-#Kullanıcı "Yönetici Girişi" sayfasına gider.
-#Kullanıcı yönetim müşterileri sayfasına gider.
-#Kullanıcı, tüm müşterilere ait hesap bilgilerin listelendiği bir sayfa görür.
-#Kullanıcı bir müşterinin adına tıklayarak, müşterinin tüm bilgilerini görüntüleyen bir sayfaya yönlendirilir.
-#Kullanıcı müşteri bilgilerinde değişiklik yapmak istediğinde, kullanıcı düzenleme seçeneğini tıklar.
-#Kullanıcı müşteri bilgilerinde değişiklik yapabilir veya yeni bir müşteri kaydı oluşturabilir.
-#Kullanıcı müşteri silme seçeneğini tıklar ve silme işlemini onaylar.
-#Başarılı bir mesaj görüntülenir.
-#Kullanıcı müşteri bilgilerini kontrol eder ve doğru şekilde yönetildiğinden emin olur.
-#Bu senaryo, Yöneticinin Müşteri Yönetim portalında belirtilen kabul kriterlerine uygun olarak bir müşteri yönetip yönetemediği konusunda test edilir. Senaryo ayrıca, kullanıcının müşteri bilgilerini görüntülemesine, düzenlemesine, silmesine izin verir ve müşteri bilgilerinin doğru şekilde yönetildiğini kontrol eder.
-
 
 
 

@@ -41,22 +41,4 @@ Feature: US008
     And bir kucuk, bir buyuk harf, bir rakam ile bir ozel karakter iceren yedi karakter girer
     Then Strength barin tamamen yandigini test eder
   And Administrator signout butonuna tiklar
-    #And tarayiciyi kapatir
-
-#  Senaryo: Şifre değiştirme ve güçlendirme
-#  Verilen gmibank.com web sitesi açılır
-#  Kullanıcı hesabına giriş yapar
-#  Kullanıcı hesap ayarlarını açar
-#  Kullanıcı mevcut şifresini girerek şifre değiştirme işlemini başlatır
-#  Kullanıcı eski şifreyi girer
-#  Yeni bir şifre oluştururken minimum 1 küçük harf, 1 büyük harf, 1 sayı ve 1 özel karakter kullanır
-#  Şifrenin uzunluğu en az 7 karakterdir
-#  Yeni şifreyi onaylar
-#  Yeni şifrenin kabul kriterleri doğru şekilde karşılandığı görülür
-#  Başarılı bir mesaj görüntülenir
-#  Bu senaryo, kullanıcıların mevcut şifrelerini değiştirerek
-#  güçlü bir şifre oluşturmalarını ve kabul kriterlerinin
-#  doğru şekilde karşılandığını kontrol etmelerini sağlar.
-#  Ayrıca, yeni şifrenin doğru şekilde onaylanarak kaydedildiğini de doğrular.
-
 
