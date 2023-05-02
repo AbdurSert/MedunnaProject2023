@@ -3,15 +3,15 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.US008_Pages;
-import pages.US013_Pages;
-import pages.US018_Pages;
+import pages.US08_Page;
+import pages.US13_Page;
+import pages.US18_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US18_Steps {
-    US008_Pages us008Pages= new US008_Pages();
-    US018_Pages us018Pages= new US018_Pages();
+    US08_Page us008Pages= new US08_Page();
+    US18_Page us018Pages= new US18_Page();
     @And("Manager Username ve password girer, signin butonuna tiklar ve login olur")
     public void managerUsernameVePasswordGirerSigninButonunaTiklarVeLoginOlur() {
         us008Pages.LoginUsername.sendKeys(ConfigReader.getProperty("ManagerName"));
