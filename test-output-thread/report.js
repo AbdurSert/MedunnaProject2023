@@ -1,4 +1,4 @@
 $(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"c2030551-157d-46d7-8c0a-c54c523ed9fe","feature":"System should allow user to manage their account","scenario":"User should see all account types and balance populated","start":1683038480540,"group":1,"content":"","tags":"@us_015,","end":1683038547839,"className":"failed"},{"id":"4bc8ce9f-e605-416c-a6eb-104bf081f113","feature":"System should allow user to manage their account","scenario":"User can view transaction","start":1683038547857,"group":1,"content":"","tags":"@us_015,","end":1683038555094,"className":"failed"}]);
+CucumberHTML.timelineItems.pushArray([{"id":"9e05d6b3-88aa-4714-91c2-604fdff16318","feature":"System should allow to read all customers info using api end point","scenario":"Read all customers you created and validate them from your data set","start":1683067072652,"group":1,"content":"","tags":"@us_020,","end":1683067082127,"className":"passed"}]);
 CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
 });
