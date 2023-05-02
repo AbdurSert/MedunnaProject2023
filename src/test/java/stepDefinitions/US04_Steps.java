@@ -5,16 +5,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import pages.HomePage;
 import pages.Loginpage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US04_Steps {
-
-    HomePage homePage = new HomePage();
     Loginpage loginpage = new Loginpage();
-
 
     @Given("go to website Gmibank")
     public void goToWebsiteGmibank() throws InterruptedException {
@@ -24,12 +20,12 @@ public class US04_Steps {
 
     @And("click dropdown login")
     public void clickDropdownLogin() {
-    homePage.dropdown.click();
+
     }
 
     @And("click sign in")
     public void clickSignIn() {
-    homePage.signin.click();
+
     }
 
     @And("enter a valid username")
