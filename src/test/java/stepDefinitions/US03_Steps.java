@@ -6,12 +6,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.Color;
-import pages.US003_Pages;
+import pages.US03_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US03_Steps {
-    US003_Pages us003Pages = new US003_Pages();
+    US03_Page us003Pages = new US03_Page();
     @Given("kullanıcı gmibank anasayfasına gider")
     public void kullanıcıGmibankAnasayfasınaGider() {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
