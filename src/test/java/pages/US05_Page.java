@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US_005_LoginPage {
+public class US05_Page {
 
-    public US_005_LoginPage(){PageFactory.initElements(Driver.getDriver(),this);}
+    public US05_Page(){PageFactory.initElements(Driver.getDriver(),this);}
 
     @FindBy(xpath="(//a[@class='dropdown-toggle nav-link'])[2]")
     public WebElement profileMenu;
@@ -15,7 +15,7 @@ public class US_005_LoginPage {
     @FindBy(xpath="(//a[@id='login-item'])[1]")
     public WebElement signInLink;
 
-    @FindBy(xpath="(//input[@id='username'])[1]")
+    @FindBy(xpath="//input[@id='username']")
     public WebElement username;
 
     @FindBy(xpath="//input[@id='password']")

@@ -5,15 +5,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.US_005_LoginPage;
-import pages.US_010_NewCustomerPage;
+import pages.US05_Page;
+import pages.US10_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_010_NewCustomerPageSD {
+public class US10_Steps {
 
-    US_005_LoginPage us_005_loginPage = new US_005_LoginPage();
-    US_010_NewCustomerPage us_010_newCustomerPage = new US_010_NewCustomerPage();
+    US05_Page us_005_loginPage = new US05_Page();
+    US10_Page us_010_newCustomerPage = new US10_Page();
     @Given("The manager goes to the homepage")
     public void theManagerGoesToTheHomepage() {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -32,8 +32,9 @@ public class US_010_NewCustomerPageSD {
     }
 
     @And("The manager clicks the username's text box")
-    public void theManagerClicksTheUsernameSTextBox() {
+    public void theManagerClicksTheUsernameSTextBox() throws InterruptedException {
         us_005_loginPage.username.click();
+        Driver.wait(5);
     }
 
     @And("The manager enters valid username for manager")

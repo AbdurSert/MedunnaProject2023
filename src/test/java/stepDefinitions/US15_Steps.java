@@ -1,14 +1,13 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.US_015_AccountPage;
+import pages.US15_Page;
 
-public class US_015_AccountPageSD {
+public class US15_Steps {
 
-    US_015_AccountPage us_015_accountPage = new US_015_AccountPage();
+    US15_Page us_015_accountPage = new US15_Page();
 
     @And("The manager selects Manage Accounts")
     public void theManagerSelectsManageAccounts() {
@@ -17,6 +16,8 @@ public class US_015_AccountPageSD {
 
     @Then("The user sees all account types and balance populated")
     public void theUserSeesAllAccountTypesAndBalancePopulated() {
+
+        Assert.assertTrue(us_015_accountPage.Transactions.isDisplayed());
     }
 
     @And("The user clicks the View button")
@@ -31,5 +32,13 @@ public class US_015_AccountPageSD {
     }
 
 
+    @And("The user clicks the button of {string} on the headline")
+    public void theUserClicksTheButtonOfOnTheHeadline(String arg0) {
+        us_015_accountPage.myOperations.click();
+    }
 
+    @And("The user selects Manage Accounts")
+    public void theUserSelectsManageAccounts() {
+        us_015_accountPage.manageAccounts.click();
+    }
 }

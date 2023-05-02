@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US_010_NewCustomerPage {
+public class US10_Page {
 
-    public US_010_NewCustomerPage(){PageFactory.initElements(Driver.getDriver(),this);}
+    public US10_Page(){PageFactory.initElements(Driver.getDriver(),this);}
 
     @FindBy(xpath="(//a[@class='dropdown-toggle nav-link'])[2]")
     public WebElement myOperations;

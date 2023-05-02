@@ -5,9 +5,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US_015_AccountPage {
+public class US15_Page {
 
-    public US_015_AccountPage(){PageFactory.initElements(Driver.getDriver(),this);}
+    public US15_Page(){PageFactory.initElements(Driver.getDriver(),this);}
+
+    @FindBy(xpath="//span[text()='My Operations']")
+    public WebElement myOperations;
 
     @FindBy(xpath="(//a[@role='menuitem'])[2]")
     public WebElement manageAccounts;
@@ -17,4 +20,9 @@ public class US_015_AccountPage {
 
     @FindBy(xpath="(//span[text()='Account']")
     public WebElement accountTransaction;
+
+    @FindBy(xpath = "//div[@id=\"app-view-container\"]/div[1]/div/div/div/div[1]/div/table/thead")
+    public WebElement Transactions;
+
+
 }

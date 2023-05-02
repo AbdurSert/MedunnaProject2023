@@ -1,29 +1,19 @@
 package stepDefinitions;
 
 
-import helper.ApiCalls;
-import io.cucumber.cienvironment.internal.com.eclipsesource.json.PrettyPrint;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
-import io.restassured.module.jsv.JsonSchemaValidator;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
-import org.json.JSONObject;
 import org.junit.Assert;
 import utilities.ConfigReader;
-import utilities.ReusableMethods;
 
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class US_020_CustomerApiTest {
+public class US20_Steps {
 
     Response response;
 

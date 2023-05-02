@@ -6,18 +6,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.US_005_LoginPage;
+import pages.US05_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-import java.time.Duration;
+public class US05_Steps {
 
-public class US_005_LoginPageSD {
-
-    US_005_LoginPage us_005_loginPage = new US_005_LoginPage();
+    US05_Page us_005_loginPage = new US05_Page();
 
     @Given("The user goes to the homepage")
     public void theUserGoesToTheHomepage() {
