@@ -4,31 +4,31 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.Loginpage;
-import pages.US019_Page;
+import pages.US04_Page;
+import pages.US19_Page;
 import utilities.Driver;
 
 public class US19_Steps {
 
-    US019_Page us019Pages = new US019_Page();
-    Loginpage loginpage = new Loginpage();
+    US19_Page us019Pages = new US19_Page();
+    US04_Page US04Page = new US04_Page();
     Faker faker = new Faker();
 
     String accountTypes;
     @And("enter manager username")
     public void enterManagerUsername() {
-        loginpage.username.sendKeys("manager2023");
+        US04Page.username.sendKeys("manager2023");
     }
 
     @And("enter manager password")
     public void enterManagerPassword(){
-        loginpage.password.sendKeys("Mana.Ger23");
+        US04Page.password.sendKeys("Mana.Ger23");
 
     }
 
     @And("click to dropdown on my operations")
     public void clickToDropdownOnMyOperations() throws InterruptedException {
-    loginpage.myOperationsText.click();
+    US04Page.myOperationsText.click();
     }
 
     @And("click to manage accounts")
