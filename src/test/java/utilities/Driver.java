@@ -14,22 +14,23 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
+
 public class Driver {
 
+    public static WebDriver driver;
 
-    public static WebDriver driver; // selenium dependency bunun icin gerekli
+    public static WebDriver getDriver() {
 
-    public static WebDriver getDriver(){
+        if (driver == null) {
 
-        if(driver==null){
-
-            switch (ConfigReader.getProperty("browser")){
+            switch (ConfigReader.getProperty("browser")) {
 
                 case "chrome":
                 default:
+
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("start-maximized");
-                    WebDriverManager.chromedriver().setup(); // bonogarcia dependency bunun için gerekli
+
                     driver = new ChromeDriver(chromeOptions);
                     System.out.println("CHROME WORKS!!!");
                     break;
@@ -56,7 +57,7 @@ public class Driver {
                     EdgeOptions edgeOptions = new EdgeOptions();
                     edgeOptions.addArguments("start-maximized");
                     WebDriverManager.edgedriver().setup();
-                    driver= new EdgeDriver(edgeOptions);
+                    driver = new EdgeDriver(edgeOptions);
                     System.out.println("EDGE WORKS!!!");
                     break;
                 case "ie":
@@ -75,6 +76,7 @@ public class Driver {
                     break;
             }
         }
+
         //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -82,20 +84,17 @@ public class Driver {
     }
 
     public static void closeDriver() {
-        if(driver!=null){
+        if (driver != null) {
             driver.quit();
             driver = null;
         }
     }
 
-    public static void wait(int second) throws InterruptedException {
 
-        Thread.sleep(second*1000);
 
-    }
+}
 
     public static void refreshPage(){
         driver.navigate().refresh();
     }
-
 }
