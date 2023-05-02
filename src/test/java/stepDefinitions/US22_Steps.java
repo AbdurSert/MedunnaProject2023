@@ -22,7 +22,7 @@ public class US22_Steps {
     ObjectMapper objectMapper = new ObjectMapper();
     @Given("Read all states you created")
     public void readAllStatesYouCreated() {
-        response = RestAssured.given().auth().oauth2(ConfigReader.getProperty("api_bearer_token"))
+        response = RestAssured.given().auth().oauth2(ConfigReader.getProperty("token"))
                 .and().baseUri("https://www.gmibank.com/api/")
                 .and().contentType(ContentType.JSON)
                 .and().get("tp-states").then().extract().response();
