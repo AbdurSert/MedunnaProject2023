@@ -16,8 +16,8 @@ public class US13_Steps {
 
     @And("Employee Username ve password girer, signin butonuna tiklar ve login olur")
     public void employeeUsernameVePasswordGirerSigninButonunaTiklarVeLoginOlur() {
-        us008Pages.LoginUsername.sendKeys(ConfigReader.getProperty("EmployeeName"));
-        us008Pages.LoginPassword.sendKeys(ConfigReader.getProperty("EmployeePassword"));
+        us008Pages.LoginUsername.sendKeys(ConfigReader.getProperty("employee_username"));
+        us008Pages.LoginPassword.sendKeys(ConfigReader.getProperty("employee_password"));
         us008Pages.signInButton.submit();//click??
 
     }
