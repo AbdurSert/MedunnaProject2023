@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import pages.US002_Pages;
+import pages.US02_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -22,7 +22,7 @@ public class US02_Steps {
         }
         return key;
     }
-    US002_Pages pages = new US002_Pages();
+    US02_Page pages = new US02_Page();
     @Given("Kullanici anasayfaya yonlenir")
     public void kullaniciAnasayfayaYonlenir() {
         Driver.getDriver().get(ConfigReader.getProperty("url"));

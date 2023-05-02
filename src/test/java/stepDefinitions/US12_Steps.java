@@ -5,14 +5,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.US012_Pages;
+import pages.US12_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 
 
 public class US12_Steps {
-    US012_Pages us012Pages = new US012_Pages();
+    US12_Page us012Pages = new US12_Page();
     Faker faker = new Faker();
     String customerEmail = faker.internet().emailAddress();
     String customerPhoneNumber = faker.random().nextInt(100,999)+ "-" + faker.random().nextInt(100,999) + "-" +

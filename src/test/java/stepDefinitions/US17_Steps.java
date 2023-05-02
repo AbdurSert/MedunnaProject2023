@@ -5,12 +5,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import pages.US017_Pages;
+import pages.US17_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US17_Steps {
-    US017_Pages us017Pages = new US017_Pages();
+    US17_Page us017Pages = new US17_Page();
     String deactivatedUserText;
     String deactivatedText;
     String profileLast;
