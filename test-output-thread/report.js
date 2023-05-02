@@ -1,4 +1,4 @@
 $(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"e7910e50-c8fe-42a5-b4d9-1dd4fa7f381f","feature":"adrese git","scenario":"adrese gidilir","start":1680035827715,"group":1,"content":"","tags":"@medunna,","end":1680035827875,"className":"undefined"}]);
+CucumberHTML.timelineItems.pushArray([{"id":"c2030551-157d-46d7-8c0a-c54c523ed9fe","feature":"System should allow user to manage their account","scenario":"User should see all account types and balance populated","start":1683038480540,"group":1,"content":"","tags":"@us_015,","end":1683038547839,"className":"failed"},{"id":"4bc8ce9f-e605-416c-a6eb-104bf081f113","feature":"System should allow user to manage their account","scenario":"User can view transaction","start":1683038547857,"group":1,"content":"","tags":"@us_015,","end":1683038555094,"className":"failed"}]);
 CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
 });
