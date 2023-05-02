@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class US019_Page {
+public class US19_Page {
 
     @FindBy (xpath = ("//a[@id='jh-create-entity']"))
     public WebElement createNewAccount;

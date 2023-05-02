@@ -5,96 +5,96 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import pages.CreateorEditCustomerPage;
-import pages.ManageCustomersPage;
+import pages.US14_Page;
+import pages.US09_Page;
 import utilities.Driver;
 
 public class US14_Steps {
-    CreateorEditCustomerPage createorEditCustomerPage = new CreateorEditCustomerPage();
-    ManageCustomersPage manageCustomersPage = new ManageCustomersPage();
+    US14_Page US14Page = new US14_Page();
+    US09_Page US09Page = new US09_Page();
     Faker faker = new Faker();
 
 
     @And("click to create a new customer")
     public void clickToCreateANewCustomer() {
-    manageCustomersPage.createANewCustomerBox.click();
+    US09Page.createANewCustomerBox.click();
     }
 
     @And("click to firstname box")
     public void clickToFirstnameBox() {
-        createorEditCustomerPage.FirstName.click();
+        US14Page.FirstName.click();
     }
 
     @And("enter a name")
     public void enterAName() {
        String rndmName = faker.random().toString();
-       createorEditCustomerPage.FirstName.sendKeys(rndmName+ Keys.TAB);
+       US14Page.FirstName.sendKeys(rndmName+ Keys.TAB);
 
     }
 
     @And("enter a lastname")
     public void enterALastname() {
         String rndmLastName = faker.random().toString();
-        createorEditCustomerPage.LastName.sendKeys(rndmLastName+Keys.TAB);
+        US14Page.LastName.sendKeys(rndmLastName+Keys.TAB);
     }
 
     @And("enter a middle initial")
     public void enterAMiddleInitial() {
         String rndmMiddleInitial = faker.random().toString();
-        createorEditCustomerPage.MiddleInitial.sendKeys(rndmMiddleInitial+Keys.TAB);
+        US14Page.MiddleInitial.sendKeys(rndmMiddleInitial+Keys.TAB);
     }
 
     @And("enter a mail")
     public void enterAMail() {
         String rndmMail = faker.random().toString();
-        createorEditCustomerPage.Email.sendKeys(rndmMail+Keys.TAB);
+        US14Page.Email.sendKeys(rndmMail+Keys.TAB);
     }
 
     @And("enter a mobile phone number")
     public void enterAMobilePhoneNumber() {
-        createorEditCustomerPage.MobilePhone.sendKeys("543-714-8712"+ Keys.TAB);
+        US14Page.MobilePhone.sendKeys("543-714-8712"+ Keys.TAB);
 
     }
 
     @And("enter a phone number")
     public void enterAPhoneNumber() {
-        createorEditCustomerPage.Phone.sendKeys("543-714-8712"+ Keys.TAB);
+        US14Page.Phone.sendKeys("543-714-8712"+ Keys.TAB);
     }
 
     @And("enter a zipcode")
     public void enterAZipcode() {
-        createorEditCustomerPage.zipCode.sendKeys("1022LA"+ Keys.TAB);
+        US14Page.zipCode.sendKeys("1022LA"+ Keys.TAB);
     }
 
     @And("enter a address")
     public void enterAAddress() {
-        createorEditCustomerPage.address.sendKeys("Elzenhagensingel 1623"+Keys.TAB);
+        US14Page.address.sendKeys("Elzenhagensingel 1623"+Keys.TAB);
     }
 
     @And("enter a city")
     public void enterACity() {
-        createorEditCustomerPage.city.sendKeys("Amsterdam"+Keys.TAB);
+        US14Page.city.sendKeys("Amsterdam"+Keys.TAB);
     }
 
     @And("enter a SSN")
     public void enterASSN() {
-        createorEditCustomerPage.ssn.sendKeys("786-53-3012"+Keys.TAB);
+        US14Page.ssn.sendKeys("786-53-3012"+Keys.TAB);
     }
 
     @And("enter a date")
     public void enterADate() {
-        createorEditCustomerPage.createDate.sendKeys("04/30/2023" +Keys.TAB);
+        US14Page.createDate.sendKeys("04/30/2023" +Keys.TAB);
     }
 
     @And("click to save customer box")
     public void clickToSaveCustomerBox() throws InterruptedException {
-        createorEditCustomerPage.saveBox.click();
+        US14Page.saveBox.click();
         Thread.sleep(5000);
     }
 
     @Then("assert that the date format is MMDDYYYY")
     public void assertThatTheDateFormatIsMMDDYYYY() {
-        String actualDateFormat = createorEditCustomerPage.createDate.getAttribute("placeholder");
+        String actualDateFormat = US14Page.createDate.getAttribute("placeholder");
         String expectedDateFormat = "YYYY-MM-DD HH:mm";
 
 
@@ -104,13 +104,13 @@ public class US14_Steps {
 
     @And("user clicks on the manage accounts")
     public void userClicksOnTheManageAccounts() throws InterruptedException {
-        createorEditCustomerPage.manageAccountBox.click();
+        US14Page.manageAccountBox.click();
         Thread.sleep(5000);
     }
 
     @And("user clicks on one of the created accounts")
     public void userClicksOnOneOfTheCreatedAccounts() {
-        createorEditCustomerPage.oneOfTheCreatedAccount.click();
+        US14Page.oneOfTheCreatedAccount.click();
     }
 
     @Then("assert that you clicked on a created account")
@@ -123,11 +123,11 @@ public class US14_Steps {
 
     @And("click to the Zelle Enrolled box")
     public void clickToTheZelleEnrolledBox() {
-        createorEditCustomerPage.zelleEnrolled.click();
+        US14Page.zelleEnrolled.click();
     }
 
     @Then("assert that new customer is created")
     public void assertThatNewCustomerIsCreated() {
-      Assert.assertTrue(createorEditCustomerPage.savedMessage.isDisplayed());
+      Assert.assertTrue(US14Page.savedMessage.isDisplayed());
     }
 }
