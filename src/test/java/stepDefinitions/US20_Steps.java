@@ -102,8 +102,9 @@ public class US20_Steps {
         response.prettyPrint();
     }
 
-    @Then("Validate them from your data set")
-    public void validateThemFromYourDataSet() {
+    @Then("Validate customers from the Data Set")
+    public void validateCustomersFromTheDataSet() {
+
         String actualOutput =  response.body().asString();
 
         System.out.println(actualOutput);
