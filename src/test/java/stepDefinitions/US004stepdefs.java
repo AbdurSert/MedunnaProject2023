@@ -19,6 +19,7 @@ public class US004stepdefs {
     @Given("go to website Gmibank")
     public void goToWebsiteGmibank() throws InterruptedException {
     Driver.getDriver().get(ConfigReader.getProperty("url"));
+    Thread.sleep(5000);
     }
 
     @And("click dropdown login")

@@ -1,4 +1,4 @@
 $(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"05153fe7-0f50-4b97-8e7a-36eccb2d676a","feature":"System should allow Admin to create a new Account","scenario":"User should create a description for the new account and it cannot be blank","start":1682019739108,"group":1,"content":"","tags":"@us019,@us01901,","end":1682019802685,"className":"failed"}]);
+CucumberHTML.timelineItems.pushArray([{"id":"8c99d7b6-22ab-4d53-be6a-e854bbe8701a","feature":"Date should be created on the time of account creation","scenario":"User can select Zelle Enrolled optionally and save it","start":1682986451286,"group":1,"content":"","tags":"@us014,@us01405,","end":1682986502465,"className":"passed"}]);
 CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
 });
