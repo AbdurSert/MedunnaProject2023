@@ -14,8 +14,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class Driver {
 
-
-    public static WebDriver driver; // selenium dependency bunun icin gerekli
+    public static WebDriver driver;
 
     public static WebDriver getDriver(){
 
@@ -27,7 +26,7 @@ public class Driver {
                 default:
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("start-maximized");
-                    WebDriverManager.chromedriver().setup(); // bonogarcia dependency bunun için gerekli
+                    WebDriverManager.chromedriver().setup(); //
                     driver = new ChromeDriver(chromeOptions);
                     System.out.println("CHROME WORKS!!!");
                     break;
@@ -73,8 +72,6 @@ public class Driver {
                     break;
             }
         }
-        //driver.manage().window().maximize();
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         return driver;
     }
@@ -86,9 +83,5 @@ public class Driver {
         }
     }
 
-    public static void wait(int second) throws InterruptedException {
 
-        Thread.sleep(second*1000);
-
-    }
 }

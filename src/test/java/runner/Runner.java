@@ -17,10 +17,9 @@ import org.junit.runner.RunWith;
         },
 
         features = "src/test/resources",
-        glue = "stepdefinitions",
-        tags = "@medunna",
+        glue = "stepDefinitions",
+        tags = "@US26",
         dryRun = false
-
 
 )
 public class Runner {
