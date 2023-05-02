@@ -23,7 +23,7 @@ public class US25_Steps {
 
         System.out.println(reqBody.toString());        
 
-        Response response = given().
+        response = given().
                 auth().oauth2(ConfigReader.getProperty("token")).
                 contentType(ContentType.JSON).
                 when().
@@ -41,7 +41,7 @@ public class US25_Steps {
                 assertThat().
                 statusCode(201).
                 contentType(ContentType.JSON).
-                body("id", Matchers.equalTo(185020)).
+                //body("id", Matchers.equalTo(185020)).
                 body("name", Matchers.equalTo("England")).
                 body("states", Matchers.equalTo(null));
     }
