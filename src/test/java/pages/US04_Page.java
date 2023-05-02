@@ -5,12 +5,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class Loginpage {
+public class US04_Page {
 
-    public Loginpage(){
+    public US04_Page(){
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
+
+    @FindBy(xpath = ("//a[@aria-expanded='true']"))
+    public WebElement dropdown;
 
     @FindBy(xpath = ("//input[@id='username']"))
     public WebElement username;
