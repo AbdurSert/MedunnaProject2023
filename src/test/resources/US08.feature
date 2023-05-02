@@ -1,4 +1,4 @@
-Feature: US008
+Feature: US08
 #  Password segment on Homepage should be editable
 #  Ana Sayfadaki sifre bolumu duzenlenebilir olmalidir
 #
@@ -19,7 +19,7 @@ Feature: US008
 #  Daha güçlü bir şifre için en az 7 karakter olmalı
 #  Yeni şifre onaylanmalıdır
 
-  @us008
+  @us08
   @smoke
   Scenario:Ana Sayfadaki sifre bolumu duzenlenebilir olmalidir
     Given kullanıcı gmibank anasayfasına gider

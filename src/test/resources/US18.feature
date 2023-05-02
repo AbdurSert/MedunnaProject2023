@@ -1,4 +1,4 @@
-Feature: US018
+Feature: US18
 #System should allow Admin to manage a customer
 #All customers should show up on manage customers module populating the account information of the customer "First Name Last Name  Middle Initial  Email  Mobile Phone Number Phone Number Address Create Date"
 #There should be a View option where customer can be navigated to all customer info and see edit button there
@@ -14,7 +14,7 @@ Feature: US018
 #Kullanıcı bir müşteriyi silebilir, ancak kullanıcı silme konusunda eminse bir mesaj görür
 
     #admin müşteriyi yönetemiyor, manager yaptım
-@us018
+@us18
 @smoke
 Scenario: Sistem Yoneticinin bir musteriyi yonetmesine izin vermelidir
     Given kullanıcı gmibank anasayfasına gider
