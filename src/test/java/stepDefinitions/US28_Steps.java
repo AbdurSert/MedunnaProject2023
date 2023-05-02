@@ -7,7 +7,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class US028_Steps {
+public class US28_Steps {
 
 
 }

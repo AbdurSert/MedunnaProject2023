@@ -8,7 +8,7 @@ import org.openqa.selenium.support.Color;
 import pages.US008_Pages;
 import utilities.Driver;
 
-public class US008_Steps {
+public class US08_Steps {
     US008_Pages us008Pages= new US008_Pages();
     @And("signin butonuna tiklar")
     public void signinButonunaTiklar() {

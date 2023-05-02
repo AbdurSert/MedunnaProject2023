@@ -17,7 +17,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class US023_Steps {
+public class US23_Steps {
 
         Response response;
 

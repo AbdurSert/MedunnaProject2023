@@ -92,7 +92,7 @@ public class Driver {
 
 
 
-}
+
 
     public static void refreshPage(){
         driver.navigate().refresh();

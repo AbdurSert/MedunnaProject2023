@@ -12,10 +12,9 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class US007_Steps {
+public class US07_Steps {
     US007_Pages us007Page = new US007_Pages();
     public void selectAnItemFromDropdown(WebElement item, String selectableItem) throws InterruptedException {
-        Driver.wait(5);
         Select select = new Select(item);
         for (int i=0; i<select.getOptions().size(); i++){
             if(select.getOptions().get(i).getText().equalsIgnoreCase(selectableItem)){

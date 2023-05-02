@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US012_Pages {
-    public US012_Pages() {PageFactory.initElements(Driver.getDriver(), this);}
+public class US12_Page {
+    public US12_Page() {PageFactory.initElements(Driver.getDriver(), this);}
 
     @FindBy(xpath = "//a[@id='login-item']//span")
     public WebElement signInLink;

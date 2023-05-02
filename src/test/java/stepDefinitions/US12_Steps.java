@@ -11,7 +11,7 @@ import utilities.Driver;
 
 
 
-public class US012_Steps {
+public class US12_Steps {
     US012_Pages us012Pages = new US012_Pages();
     Faker faker = new Faker();
     String customerEmail = faker.internet().emailAddress();
@@ -59,15 +59,12 @@ public class US012_Steps {
     @And("Employee hesaptan cikis yapilir")
     public void employeeHesaptanCikisYapilir() throws InterruptedException {
         us012Pages.employeeAccountMenu.click();
-        Driver.wait(4);
         us012Pages.signOutButton.click();
-        Driver.wait(4);
     }
 
     @Then("kullanici view sayfasinda edit butonunu goruntuler")
     public void kullaniciViewSayfasindaEditButonunuGoruntuler() throws InterruptedException {
         us012Pages.customerViewButton.click();
-        Driver.wait(2);
         Assert.assertTrue(us012Pages.editButtonInView.isDisplayed());
     }
 
@@ -79,7 +76,6 @@ public class US012_Steps {
     @When("kullanici duzenle butonuna tiklar")
     public void kullaniciDuzenleButonunaTiklar() throws InterruptedException {
         us012Pages.editButtonInCustomerPage.click();
-        Driver.wait(2);
     }
     @Then("kullanici Creat or edit a Customer mesajini gorur")
     public void kullaniciCreatOrEditACustomerMesajiniGorur() {
@@ -91,24 +87,17 @@ public class US012_Steps {
     @And("kullanici guncel e-posta, adres ve telefon numarasi bilgilerini girer")
     public void kullaniciGuncelEPostaAdresVeTelefonNumarasiBilgileriniGirer() throws InterruptedException {
         us012Pages.emailInCustomerEditPage.clear();
-        Driver.wait(1);
         us012Pages.emailInCustomerEditPage.sendKeys(customerEmail);
-        Driver.wait(1);
         us012Pages.addressInCustomerEditPage.clear();
-        Driver.wait(1);
         us012Pages.addressInCustomerEditPage.sendKeys(customerStreetAddress);
-        Driver.wait(1);
         us012Pages.mobilePhoneNumberInCustomerEditPage.clear();
-        Driver.wait(1);
         us012Pages.mobilePhoneNumberInCustomerEditPage.sendKeys(customerPhoneNumber);
-        Driver.wait(1);
 
     }
 
     @When("kullanici Save tusunu tiklar")
     public void kullaniciSaveTusunuTiklar() throws InterruptedException {
         us012Pages.saveButtonInEditPage.click();
-        Driver.wait(1);
     }
 
 
@@ -116,7 +105,6 @@ public class US012_Steps {
     public void kullaniciGuncelBilgilerKaydedildiMesajiniGorur() throws InterruptedException {
 
         us012Pages.myOperationsLink.click();
-        Driver.wait(2);
         us012Pages.manageCustomersLink.click();
         String actualCustomerEmail = us012Pages.updatedCustomerEmailInCustomerPage.getText();
         String actualCustomerAddress = us012Pages.updatedStreetAddressInCustomerPage.getText();
@@ -140,7 +128,6 @@ public class US012_Steps {
     @And("kullanici edit butonuna tiklar")
     public void kullaniciEditButonunaTiklar() throws InterruptedException {
         us012Pages.customerEditButton.click();
-        Driver.wait(1);
     }
 
     @And("kullanici musteri sil tusuna tiklar")
@@ -152,7 +139,6 @@ public class US012_Steps {
     @Then("Silme islemini dogrulama mesajini gorur")
     public void silmeIsleminiDogrulamaMesajiniGorur() throws InterruptedException {
         us012Pages.confirmDeleteOperationMessage.isDisplayed();
-        Driver.wait(3);
     Assert.assertTrue(us012Pages.confirmDeleteOperationMessage.isDisplayed());
 
     }

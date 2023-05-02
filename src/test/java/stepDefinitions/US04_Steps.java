@@ -10,7 +10,7 @@ import pages.Loginpage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US004stepdefs {
+public class US04_Steps {
 
     HomePage homePage = new HomePage();
     Loginpage loginpage = new Loginpage();

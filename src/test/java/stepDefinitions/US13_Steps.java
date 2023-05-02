@@ -10,7 +10,7 @@ import pages.US013_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US013_Steps {
+public class US13_Steps {
     US008_Pages us008Pages= new US008_Pages();
     US013_Pages us013Pages = new US013_Pages();
 

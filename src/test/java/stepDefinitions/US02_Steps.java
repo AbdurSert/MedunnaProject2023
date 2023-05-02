@@ -11,7 +11,7 @@ import pages.US002_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US002_Steps {
+public class US02_Steps {
     Faker faker = new Faker();
     String invalidSSN1 = faker.regexify("([10-99]){2}([ß|&|%|$|*|#|§|+|≠|!|¡|]){1}([-]){1}([10-99]){2}([-]{1})([1000-9999]){4}");
     String invalidSSN2 = faker.regexify("([10-99]){2}([A-Z]){1}([-]){1}([10-99]){2}([-]{1})([1000-9999]){4}");
@@ -106,7 +106,6 @@ public class US002_Steps {
 
     @And("kullanici gecersiz bir {string} adresi girer")
     public void kullaniciGecersizBirAdresiGirer(String arg0) throws InterruptedException {pages.eMail.sendKeys(arg0 + Keys.TAB);
-        Driver.wait(2);
         System.out.println(arg0);
     }
 

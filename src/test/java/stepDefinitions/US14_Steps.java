@@ -9,7 +9,7 @@ import pages.CreateorEditCustomerPage;
 import pages.ManageCustomersPage;
 import utilities.Driver;
 
-public class US014Stepdefs {
+public class US14_Steps {
     CreateorEditCustomerPage createorEditCustomerPage = new CreateorEditCustomerPage();
     ManageCustomersPage manageCustomersPage = new ManageCustomersPage();
     Faker faker = new Faker();

@@ -7,7 +7,7 @@ import io.restassured.http.ContentType;
 import utilities.ConfigReader;
 
 
-public class US027_Steps {
+public class US27_Steps {
     @Given("User delete each state one by one")
     public void userDeleteEachStateOneByOne() {
         RestAssured.given().auth().oauth2(ConfigReader.getProperty("api_bearer_token"))

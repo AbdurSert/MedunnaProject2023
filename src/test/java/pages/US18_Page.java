@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US018_Pages {
-    public US018_Pages(){
+public class US18_Page {
+    public US18_Page(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

@@ -10,7 +10,7 @@ import pages.US003_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US003_Steps {
+public class US03_Steps {
     US003_Pages us003Pages = new US003_Pages();
     @Given("kullanıcı gmibank anasayfasına gider")
     public void kullanıcıGmibankAnasayfasınaGider() {

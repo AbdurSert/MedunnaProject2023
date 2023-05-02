@@ -15,7 +15,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-public class US022_Steps {
+public class US22_Steps {
 
     Response response;
     List<StatesPojoFiles> states;

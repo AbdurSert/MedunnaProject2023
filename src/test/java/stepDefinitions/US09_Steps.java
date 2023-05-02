@@ -8,7 +8,7 @@ import pages.Loginpage;
 import pages.ManageCustomersPage;
 import utilities.Driver;
 
-public class US009Stepdefs {
+public class US09_Steps {
 
     HomePage homePage = new HomePage();
     Loginpage loginpage = new Loginpage();

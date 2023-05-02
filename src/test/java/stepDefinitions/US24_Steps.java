@@ -7,7 +7,7 @@ import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import utilities.ConfigReader;
 
-public class US024Stepdefs {
+public class US24_Steps {
     @When("user creates state")
     public void userCreatesState() {
         Response response = RestAssured.given().auth().oauth2(ConfigReader.getProperty("token"))

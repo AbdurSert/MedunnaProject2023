@@ -9,7 +9,7 @@ import pages.US017_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US017_Steps {
+public class US17_Steps {
     US017_Pages us017Pages = new US017_Pages();
     String deactivatedUserText;
     String deactivatedText;
@@ -44,7 +44,6 @@ public class US017_Steps {
     public void signOutAsAdmin() throws InterruptedException {
         Driver.refreshPage();
         us017Pages.adminAccountMenu.click();
-        Driver.wait(3);
         us017Pages.signOutButton.click();
         Driver.refreshPage();
     }
@@ -62,7 +61,6 @@ public class US017_Steps {
         us017Pages.signInUsernameField.sendKeys(ConfigReader.getProperty("admin_username"));
         us017Pages.signInPasswordField.sendKeys(ConfigReader.getProperty("admin_password"));
         us017Pages.signInSubmitButton.click();
-        Driver.wait(1);
     }
 
     @And("Administretion linkine tiklar")

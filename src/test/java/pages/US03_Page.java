@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US003_Pages {
-    public US003_Pages() {
+public class US03_Page {
+    public US03_Page() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

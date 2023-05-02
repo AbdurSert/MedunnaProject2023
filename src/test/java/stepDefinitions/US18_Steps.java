@@ -9,7 +9,7 @@ import pages.US018_Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US018_Steps {
+public class US18_Steps {
     US008_Pages us008Pages= new US008_Pages();
     US018_Pages us018Pages= new US018_Pages();
     @And("Manager Username ve password girer, signin butonuna tiklar ve login olur")
