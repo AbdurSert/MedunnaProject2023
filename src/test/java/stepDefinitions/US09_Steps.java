@@ -3,14 +3,12 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.HomePage;
 import pages.Loginpage;
 import pages.ManageCustomersPage;
 import utilities.Driver;
 
 public class US09_Steps {
 
-    HomePage homePage = new HomePage();
     Loginpage loginpage = new Loginpage();
     ManageCustomersPage manageCustomersPage= new ManageCustomersPage();
 
