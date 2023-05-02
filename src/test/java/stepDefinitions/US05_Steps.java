@@ -53,7 +53,6 @@ public class US05_Steps {
     @And("The user clicks the sign in button")
     public void theUserClicksTheSignInButton() throws InterruptedException {
         us_005_loginPage.signInLogin.click();
-        Driver.wait(5);
 
     }
 
