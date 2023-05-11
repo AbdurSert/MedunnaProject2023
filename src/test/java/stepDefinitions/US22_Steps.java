@@ -53,8 +53,9 @@ public class US22_Steps {
 
     }
 
-    @Then("Validate them one by one")
-    public void validateThemOneByOne() throws JsonProcessingException {
+
+    @Then("user validates states one by one")
+    public void userValidatesStatesOneByOne() throws JsonProcessingException {
         String actualResponse = response.body().asPrettyString();
         System.out.println(actualResponse);
         Assert.assertTrue(actualResponse.contains("Manisa"));
@@ -69,6 +70,5 @@ public class US22_Steps {
 
         Assert.assertTrue("Does not contain expected ID", statesID.contains(174663));
         Assert.assertTrue("Does not contain expected name", statesName.contains("Samsun"));
-
     }
 }

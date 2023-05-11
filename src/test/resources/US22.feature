@@ -11,5 +11,5 @@
 
   @US022_AC02
   Scenario: Read all states and validate them 1 by 1
-    Then Validate them one by one
+    Then user validates states one by one
 
