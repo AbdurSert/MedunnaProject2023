@@ -11,7 +11,7 @@ import utilities.ConfigReader;
 
 import java.util.Map;
 
-
+import static io.restassured.RestAssured.given;
 
 public class US20_Steps {
 
@@ -104,7 +104,6 @@ public class US20_Steps {
 
     @Then("Validate customers from the Data Set")
     public void validateCustomersFromTheDataSet() {
-
 
         String actualOutput =  response.body().asString();
 
