@@ -1,3 +1,4 @@
+@regression
 Feature: U028
 
   Performance of the application should meet high standards	Check the performance at User level

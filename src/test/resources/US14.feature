@@ -1,3 +1,4 @@
+@regression
 @US014
 
   Feature: Date should be created on the time of account creation

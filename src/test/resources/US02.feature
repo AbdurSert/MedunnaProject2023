@@ -1,3 +1,4 @@
+@regression
 Feature: US_002 - Gecersiz bilgilerle sisteme kayit yapilamaz.
 
   Background:

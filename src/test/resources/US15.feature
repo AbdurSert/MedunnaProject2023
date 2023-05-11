@@ -1,3 +1,4 @@
+@regression
 Feature: System should allow user to manage their account
 
   Background:

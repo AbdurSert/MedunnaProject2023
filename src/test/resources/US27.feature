@@ -1,3 +1,4 @@
+@regression
 @US027
 Feature: System should allow to delete states using api end point
 

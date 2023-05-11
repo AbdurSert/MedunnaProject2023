@@ -1,3 +1,4 @@
+@regression
 Feature: US023
 
 #  "System should allow to read all Applicants using api end point

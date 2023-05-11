@@ -1,3 +1,4 @@
+@regression
 Feature: System should allow to create new countries using api end point
   "https://www.gmibank.com/api/tp-countries" if not created already
 

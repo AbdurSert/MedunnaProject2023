@@ -1,3 +1,4 @@
+@regression
 @US04
 Feature: Login page should accessible with valid credentials
 

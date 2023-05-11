@@ -1,3 +1,5 @@
+
+@regression
 Feature: Kullanici sistemde gecersiz bilgilerle guncelleme yapamaz
   Background:
     Given Kullanici anasayfaya yonlenir

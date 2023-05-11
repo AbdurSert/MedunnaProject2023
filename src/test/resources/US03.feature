@@ -1,3 +1,4 @@
+@regression
 Feature: US03
 # Registration page should restrict password usage to a secure and high level passcode
 # Kayıt sayfası, şifre kullanımını güvenli ve yüksek seviyeli bir şifre ile sınırlandırmalıdır

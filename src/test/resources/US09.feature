@@ -1,4 +1,4 @@
-
+@regression
 @US09
 Feature:Create a new customer
 

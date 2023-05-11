@@ -1,3 +1,4 @@
+@regression
 @US012
 Feature: Calisan, musteri sayfasini yonetebilir
 

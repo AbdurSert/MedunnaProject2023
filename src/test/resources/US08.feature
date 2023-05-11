@@ -1,3 +1,4 @@
+@regression
 Feature: US08
 #  Password segment on Homepage should be editable
 #  Ana Sayfadaki sifre bolumu duzenlenebilir olmalidir

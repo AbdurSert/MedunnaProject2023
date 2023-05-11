@@ -1,3 +1,4 @@
+@regression
 @US_010
 Feature: Address of customer can be created.
 

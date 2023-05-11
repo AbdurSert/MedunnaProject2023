@@ -1,3 +1,4 @@
+@regression
 @US017
 Feature: Admin, sistemde kullanici yonetimi yapabilmeli
 

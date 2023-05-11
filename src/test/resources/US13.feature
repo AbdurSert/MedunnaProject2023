@@ -1,3 +1,4 @@
+@regression
 Feature: US13
 #  An Employee can create a new Account
 #  User should create a description for the new account and it cannot be blank

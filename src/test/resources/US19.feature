@@ -1,3 +1,4 @@
+@regression
 @US019
 
   Feature: System should allow Admin to create a new Account

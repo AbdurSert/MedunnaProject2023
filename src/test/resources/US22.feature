@@ -1,3 +1,4 @@
+@regression
 @US022
   Feature: System should allow to read states using api end point
 
