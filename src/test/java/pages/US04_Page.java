@@ -12,17 +12,19 @@ public class US04_Page {
 
     }
 
-    @FindBy(xpath = ("//a[@aria-expanded='true']"))
+    @FindBy(xpath = ("//li[@id='account-menu']//a[@aria-haspopup='true']"))
     public WebElement dropdown;
 
+    @FindBy(xpath = ("(//a[@id='login-item'])[1]"))
+    public WebElement signin;
     @FindBy(xpath = ("//input[@id='username']"))
     public WebElement username;
 
     @FindBy(xpath = ("//input[@id='password']"))
     public WebElement password;
 
-    @FindBy(xpath = ("//button[@type='submit']//span"))
-    public WebElement signin;
+    @FindBy(xpath = ("(//span)[1048]"))
+    public WebElement secondSignIn;
 
     @FindBy (xpath = ("//span[normalize-space()='Cancel']"))
     public WebElement cancelButton;
@@ -32,12 +34,6 @@ public class US04_Page {
 
     @FindBy(xpath = ("//li[@id='entity-menu']//div[@role='menu']//a[1]//span[1]"))
     public WebElement manageCustomers;
-
-
-
-
-
-
 
 
 }

@@ -1,5 +1,5 @@
 
-@regression
+
 @US_005
 Feature: Login page should not be accessible with invalid credentials.
 

@@ -1,0 +1,4 @@
+$(document).ready(function() {
+CucumberHTML.timelineItems.pushArray([{"id":"ff0bf12d-2443-4db4-bcda-935dd5cac1fe","feature":"Login page should accessible with valid credentials","scenario":"There should be an option to cancel login","start":1683841760283,"group":1,"content":"","tags":"@us04,@us0402,","end":1683841780075,"className":"passed"},{"id":"9aa37f2b-c95d-47a1-a791-133fee3cd8f3","feature":"Login page should accessible with valid credentials","scenario":"There should be a valid username and password validating the success message to login","start":1683841724413,"group":1,"content":"","tags":"@us04,@us0401,","end":1683841760263,"className":"passed"}]);
+CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
+});

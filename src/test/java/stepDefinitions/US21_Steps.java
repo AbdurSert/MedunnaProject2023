@@ -32,7 +32,7 @@ public class US21_Steps {
 
         System.out.println(actualOutput);
 
-        Assert.assertTrue(actualOutput.contains("japonya"));
+        Assert.assertTrue(actualOutput.contains("ankara"));
 
     }
 }
