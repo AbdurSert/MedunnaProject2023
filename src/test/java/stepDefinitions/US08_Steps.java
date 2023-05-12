@@ -131,4 +131,28 @@ public class US08_Steps {
         us008Pages.signOut.click();
         Driver.closeDriver();
     }
+
+    @When("US New password yerine bir kucuk harf ile bir buyuk harf {string} girer")
+    public void usNewPasswordYerineBirKucukHarfIleBirBuyukHarfGirer( String arg1) {
+        us008Pages.newPassword.sendKeys(arg1);
+
+    }
+
+    @When("US New password yerine bir kucuk harf ve bir buyuk harf ile bir rakam {string} girer")
+    public void usNewPasswordYerineBirKucukHarfVeBirBuyukHarfIleBirRakamGirer(String arg0) {
+        us008Pages.newPassword.sendKeys(arg0);
+
+    }
+
+    @When("US New password yerine bir kucuk harf ve bir buyuk harf ile bir rakam ve bir ozel kararter {string} girer")
+    public void usNewPasswordYerineBirKucukHarfVeBirBuyukHarfIleBirRakamVeBirOzelKararterGirer(String arg0) {
+        us008Pages.newPassword.sendKeys(arg0);
+
+    }
+
+    @When("US bir kucuk, bir buyuk harf, bir rakam ile bir ozel karakterden olusan yedi karakter  {string} girer")
+    public void usBirKucukBirBuyukHarfBirRakamIleBirOzelKarakterdenOlusanYediKarakterGirer(String arg0) {
+        us008Pages.newPassword.sendKeys(arg0);
+
+    }
 }

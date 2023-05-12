@@ -26,8 +26,8 @@ public class US18_Steps {
     }
 
 
-    @Then("Tüm musteriler, musterinin hesap bilgilerini dolduran musterileri yonetme modulunde gorunur")
-    public void tümMusterilerMusterininHesapBilgileriniDolduranMusterileriYonetmeModulundeGorunur() {
+    @Then("Tum musteriler, musterinin hesap bilgilerini dolduran musterileri yonetme modulunde gorunur")
+    public void tumMusterilerMusterininHesapBilgileriniDolduranMusterileriYonetmeModulundeGorunur() {
         Assert.assertTrue(us018Pages.iD.isDisplayed());
         Assert.assertTrue(us018Pages.firstName.isDisplayed());
         Assert.assertTrue(us018Pages.lastName.isDisplayed());
@@ -65,7 +65,7 @@ public class US18_Steps {
     @And("silme konusunda emin olduguna iliskin mesaj gordugunu teyit eder")
     public void silmeKonusundaEminOldugunaIliskinMesajGordugunuTeyitEder() {
         System.out.println(4);
-        us018Pages.delete.click();
+        // us018Pages.delete.click();
 
         //iptal uyarı sayfasının yazılarını alamıyorum??
         System.out.println(us018Pages.areYouSureYouWantToDelet.getText());
@@ -82,5 +82,10 @@ public class US18_Steps {
         us018Pages.signOut.click();
         Driver.closeDriver();
 
+    }
+
+    @And("ilk musteriye ait silme tusuna tiklanir")
+    public void ilkMusteriyeAitSilmeTusunaTiklanir() {
+        us018Pages.delete.click();
     }
 }

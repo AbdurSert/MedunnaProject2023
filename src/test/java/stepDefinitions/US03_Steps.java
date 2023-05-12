@@ -38,8 +38,8 @@ public class US03_Steps {
 
     }
 
-    @Then("Strength barin bir arttgini test eder")
-    public void strengthBarinBirArttginiTestEder() {
+    @Then("Strength barin bir arttigini test eder")
+    public void strengthBarinBirArttiginiTestEder() {
         String expectedSecondBarColor = "#ff9900";//turuncu
         String secondBarColor =  us003Pages.strengthBar2.getCssValue("background-color");
         String hexColor = Color.fromString(secondBarColor).asHex();
@@ -68,8 +68,8 @@ public class US03_Steps {
         us003Pages.newPassword.sendKeys(".");
     }
 
-    @Then("Strengt barin uc arttgini test eder")
-    public void strengtBarinUcArttginiTestEder() {
+    @Then("Strengt barin uc arttigini test eder")
+    public void strengtBarinUcArttiginiTestEder() {
         String expectedFifthBarColor = "#99ff00";//yeşil
         String fifthBarColor = us003Pages.strengthBar4.getCssValue("background-color");
         String hexColor = Color.fromString(fifthBarColor).asHex();
@@ -101,4 +101,26 @@ public class US03_Steps {
     }
 
 
+    @When("New password yerine bir kucuk harf ile bir buyuk harf {string} girer")
+    public void newPasswordYerineBirKucukHarfIleBirBuyukHarfGirer(String arg0) {
+        us003Pages.newPassword.sendKeys(arg0);
+
+    }
+
+    @When("New password yerine bir kucuk harf ve bir buyuk harf ile bir rakam {string} girer")
+    public void newPasswordYerineBirKucukHarfVeBirBuyukHarfIleBirRakamGirer(String arg0) {
+        us003Pages.newPassword.sendKeys(arg0);
+
+    }
+
+    @When("New password yerine bir kucuk harf ve bir buyuk harf ile bir rakam ve bir ozel kararter {string} girer")
+    public void newPasswordYerineBirKucukHarfVeBirBuyukHarfIleBirRakamVeBirOzelKararterGirer(String arg0) {
+        us003Pages.newPassword.sendKeys(arg0);
+
+    }
+
+    @When("bir kucuk, bir buyuk harf, bir rakam ile bir ozel karakterden olusan yedi karakter  {string} girer")
+    public void birKucukBirBuyukHarfBirRakamIleBirOzelKarakterdenOlusanYediKarakterGirer(String arg0) {
+        us003Pages.newPassword.sendKeys(arg0);
+    }
 }
