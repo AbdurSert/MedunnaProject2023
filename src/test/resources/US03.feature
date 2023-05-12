@@ -1,7 +1,6 @@
 
 Feature: US03
 
-
   Background: kullanıcı kayıt sayfasına gider ve kayıt olur
     Given kullanıcı gmibank anasayfasına gider
     And anasayfada giris ikonuna tiklar
@@ -24,6 +23,7 @@ Feature: US03
       |aA1|
       |bB2|
 
+
   Scenario Outline: En az bir kucuk ve bir buyuk harf, bir rakam ve bir ozel karakter olmalı ve buna gore seviye tablosunun degişmesini gormeli
     When New password yerine bir kucuk harf ve bir buyuk harf ile bir rakam ve bir ozel kararter "<sifre>" girer
     Then Strengt barin uc arttigini test eder
@@ -31,6 +31,7 @@ Feature: US03
       |sifre|
       |aA1*|
       |bB2.|
+
 
   Scenario Outline:  Daha guclu bir sifre icin en az yedi karakter olmalıdır
     When bir kucuk, bir buyuk harf, bir rakam ile bir ozel karakterden olusan yedi karakter  "<sifre>" girer

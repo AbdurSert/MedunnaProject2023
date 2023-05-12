@@ -1,5 +1,7 @@
 @regression
 Feature: US18
+        #admin müşteriyi yönetemiyor, manager yaptım
+
     Background: Sistem Yoneticinin bir musteriyi yonetmesine izin vermelidir
         Given kullanıcı gmibank anasayfasına gider
         And anasayfada giris ikonuna tiklar

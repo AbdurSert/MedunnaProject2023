@@ -13,6 +13,8 @@ import utilities.Driver;
 public class US13_Steps {
     US08_Page us008Pages= new US08_Page();
     US13_Page us013Pages = new US13_Page();
+    String accountStatus;
+    String accountType;
 
     @And("Employee Username ve password girer, signin butonuna tiklar ve login olur")
     public void employeeUsernameVePasswordGirerSigninButonunaTiklarVeLoginOlur() {
@@ -52,8 +54,8 @@ public class US13_Steps {
         us013Pages.balance.sendKeys("100");
     }
 
-    @And("Kullanici hesap tipi olarak CHECKING, SAVING, CREDIT_CARD or INVESTING secebilir")
-    public void kullaniciHesapTipiOlarakCHECKINGSAVINGCREDIT_CARDOrINVESTINGSecebilir() {
+    @And("Kullanici hesap tipi olarak CHECKING, SAVING, CREDIT_CARD or INVESTING secer")
+    public void kullaniciHesapTipiOlarakCHECKINGSAVINGCREDIT_CARDOrINVESTINGSecer() {
         Select select = new Select(us013Pages.accountTypeDropdown);
         select.selectByValue("CREDIT_CARD");
         //select.selectByIndex(2);
@@ -87,4 +89,47 @@ public class US13_Steps {
     }
 
 
+    @When("Create a new account butonuna tiklar")
+    public void createANewAccountButonunaTiklar() {
+        us013Pages.createANewAccount.click();
+
+    }
+
+    @When("Kullanici hesap tipi olarak  CREDIT_CARD  secer ve dogrular")
+    public void kullaniciHesapTipiOlarakCREDIT_CARDSecerVeDogrular() {
+        Select select = new Select(us013Pages.accountTypeDropdown);
+        select.selectByValue("CREDIT_CARD");
+        //select.selectByIndex(2);
+        String accountType = select.getFirstSelectedOption().getText();
+        Assert.assertEquals(accountType,"CREDIT_CARD");
+    }
+
+    @When("Hesap durumu SUSPENDED olarak tanimlar")
+    public void hesapDurumuSUSPENDEDOlarakTanimlar() {
+        Select select = new Select(us013Pages.accountStatusDropdown);
+        //select.selectByIndex(0);
+        select.selectByVisibleText("SUESPENDED");
+        accountStatus = select.getFirstSelectedOption().getText();
+        //Assert.assertEquals(accountStatus,"SUESPENDED");
+    }
+
+    @Then("Hesap durumunu dogrular")
+    public void hesapDurumunuDogrular() {
+        Assert.assertEquals(accountStatus,"SUESPENDED");
+
+    }
+
+    @And("Kullanici hesap tipi olarak  CREDIT_CARD  secer")
+    public void kullaniciHesapTipiOlarakCREDIT_CARDSecer() {
+        Select select = new Select(us013Pages.accountTypeDropdown);
+        select.selectByValue("CREDIT_CARD");
+        //select.selectByIndex(2);
+        accountType = select.getFirstSelectedOption().getText();
+    }
+
+    @Then("Hesap tipini dogrular")
+    public void hesapTipiniDogrular() {
+        Assert.assertEquals(accountType,"CREDIT_CARD");
+
+    }
 }
