@@ -1,3 +1,4 @@
+@regression
 @US11
 Feature: Date should be created on the time of customer creation
 

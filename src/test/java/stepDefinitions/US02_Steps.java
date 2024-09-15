@@ -7,11 +7,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import pages.US002_Pages;
+import pages.US02_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US002_Steps {
+public class US02_Steps {
     Faker faker = new Faker();
     String invalidSSN1 = faker.regexify("([10-99]){2}([ß|&|%|$|*|#|§|+|≠|!|¡|]){1}([-]){1}([10-99]){2}([-]{1})([1000-9999]){4}");
     String invalidSSN2 = faker.regexify("([10-99]){2}([A-Z]){1}([-]){1}([10-99]){2}([-]{1})([1000-9999]){4}");
@@ -22,7 +22,7 @@ public class US002_Steps {
         }
         return key;
     }
-    US002_Pages pages = new US002_Pages();
+    US02_Page pages = new US02_Page();
     @Given("Kullanici anasayfaya yonlenir")
     public void kullaniciAnasayfayaYonlenir() {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -106,7 +106,6 @@ public class US002_Steps {
 
     @And("kullanici gecersiz bir {string} adresi girer")
     public void kullaniciGecersizBirAdresiGirer(String arg0) throws InterruptedException {pages.eMail.sendKeys(arg0 + Keys.TAB);
-        Driver.wait(2);
         System.out.println(arg0);
     }
 

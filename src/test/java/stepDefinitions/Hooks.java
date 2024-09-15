@@ -9,7 +9,7 @@ import java.time.Duration;
 public class Hooks {
 
     @Before
-    public void waitUntillElement(){
+    public void waitUntillElement() {
 
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -17,10 +17,9 @@ public class Hooks {
 
     @After
 
-    public void tearDown(){
+    public void tearDown() {
 
         Driver.closeDriver();
 
     }
-
 }

@@ -1,3 +1,4 @@
+@regression
 @US26
 
 Feature: System should allow to update countries using api end point

@@ -1,3 +1,4 @@
+@regression
 @US21
 
 Feature: System should allow to read all countries info using api end point
